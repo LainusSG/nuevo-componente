@@ -1,0 +1,391 @@
+<div style="width:80%; margin-left: 10%; margin-right: 10px;">
+
+  <mat-tab-group  [color]="'warn'"  [backgroundColor]="'primary'">
+      <mat-tab  label="Lista de Set´s"> <!------           contenido de los dos botones              -------->
+  
+  
+         <br> <mat-accordion><!------           inicia la parte deslizante              -------->
+              <mat-expansion-panel hideToggle style="width: 90%; margin-left: 5%; margin-right: 5px;">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> <!------           colocar titulo de las tablas deslizantes               -------->
+                      Set laparoscopia
+                  </mat-panel-title>
+              </mat-expansion-panel-header> <!------           colocar contenido dentro de las tablas deslizantes               -------->
+                   
+              <div style="width: 100%; display: flex; margin-top: 0; margin-bottom: 40px;">
+                <div style="width: 30%; margin-left:10%; margin-right: 5%;">
+                  <h1>
+                    <span  style="font-size: 1rem; ">Almacén: </span>
+                  </h1>
+                </div>
+                <div style=" width: 40%; margin-left:1%; margin-right: 5%;">
+                  <h1>
+                    <span  style="font-size: 1rem; ">Mínimo de Set´s: 5</span>
+                  </h1>
+                </div>
+                <div style=" width: 40%; margin-left:1%; margin-right: 3%; ">
+                  <h1>
+                    <span  style="font-size: 1rem; ">Máximo de Set´s: 10 </span>
+                  </h1>
+                </div>
+              </div>
+  
+              <mat-table [dataSource]="dataSource" class="mat-elevation-z8"> <!------           Inicia tabla 1              -------->
+           
+                  <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Nombre">
+                    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.Nombre}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Descripcion">
+                    <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.Descripcion}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Marca">
+                    <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.Marca}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Cantidad" >
+                      <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.Cantidad}} </mat-cell>
+                    </ng-container>
+  
+                    <ng-container matColumnDef="Caducidad">
+                      <mat-header-cell *matHeaderCellDef> Caducidad </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.Caducidad}} </mat-cell>
+                    </ng-container>
+  
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+               
+                <br><br><div align="center"> <img src="https://img.freepik.com/foto-gratis/pintura-lago-montana-montana-al-fondo_188544-9126.jpg" width="150px"></div>
+                <div align="right"><button  >Editar</button></div> 
+              </mat-expansion-panel>
+             
+  
+              <br> <mat-expansion-panel hideToggle style="width: 90%; margin-left: 5%; margin-right: 5px;">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> <!------           colocar titulo de las tablas deslizantes               -------->
+                    Set 2
+                  </mat-panel-title>
+                </mat-expansion-panel-header> <!------           colocar contenido dentro de las tablas deslizantes               -------->
+                
+                         
+              <div style="width: 100%; display: flex; margin-top: 0; margin-bottom: 40px;">
+                  <div style="width: 30%; margin-left:10%; margin-right: 5%;">
+                    <h1>
+                      <span  style="font-size: 1rem; ">Almacén: </span>
+                    </h1>
+                  </div>
+                  <div style=" width: 40%; margin-left:1%; margin-right: 5%;">
+                    <h1>
+                      <span  style="font-size: 1rem; ">Mínimo de Set´s: 4</span>
+                    </h1>
+                  </div>
+                  <div style=" width: 40%; margin-left:1%; margin-right: 3%; ">
+                    <h1>
+                      <span  style="font-size: 1rem; ">Máximo de Set´s: 8 </span>
+                    </h1>
+                  </div>
+                </div>
+
+              <mat-table [dataSource]="dataSource2" class="mat-elevation-z8">  <!------           Inicia tabla 2              -------->
+           
+                  <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Nombre">
+                    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.Nombre}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Descripcion">
+                    <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.Descripcion}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Marca">
+                    <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.Marca}} </mat-cell>
+                  </ng-container>
+                
+                  <ng-container matColumnDef="Cantidad">
+                      <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.Cantidad}} </mat-cell>
+                    </ng-container>
+  
+                    <ng-container matColumnDef="Caducidad">
+                      <mat-header-cell *matHeaderCellDef> Caducidad </mat-header-cell>
+                      <mat-cell *matCellDef="let element"> {{element.Caducidad}} </mat-cell>
+                    </ng-container>
+  
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+  
+  
+                <br><br><div align="center"> <img src="https://biotronitech.com.co/wp-content/uploads/2021/05/Set-basico-para-diagnostico-y-cirugia-de-senos-paranasales-600x600.jpg" width="150px"></div>
+                <div align="right"><button  >Editar</button></div> 
+  
+              </mat-expansion-panel>
+      
+  
+              
+              <br> <mat-expansion-panel hideToggle style="width: 90%; margin-left: 5%; margin-right: 5px;">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title> <!------           colocar titulo de las tablas deslizantes               -------->
+                      Set 3
+                    </mat-panel-title>
+  
+                  </mat-expansion-panel-header> <!------           colocar contenido dentro de las tablas deslizantes               -------->
+                  
+                          
+              <div style="width: 100%; display: flex; margin-top: 0; margin-bottom: 40px;">
+                    <div style="width: 30%; margin-left:10%; margin-right: 5%;">
+                      <h1>
+                        <span  style="font-size: 1rem; ">Almacén: </span>
+                      </h1>
+                    </div>
+                    <div style=" width: 40%; margin-left:1%; margin-right: 5%;">
+                      <h1>
+                        <span  style="font-size: 1rem; ">Mínimo de Set´s: 7</span>
+                      </h1>
+                    </div>
+                    <div style=" width: 40%; margin-left:1%; margin-right: 3%; ">
+                      <h1>
+                        <span  style="font-size: 1rem; ">Máximo de Set´s: 16 </span>
+                      </h1>
+                    </div>
+                  </div>
+
+                  <mat-table [dataSource]="dataSource3" class="mat-elevation-z8">  <!------           Inicia tabla 3              -------->
+           
+                          <ng-container matColumnDef="id">
+                          <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+                          </ng-container>
+                      
+                          <ng-container matColumnDef="Nombre">
+                          <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.Nombre}} </mat-cell>
+                          </ng-container>
+                      
+                          <ng-container matColumnDef="Descripcion">
+                          <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.Descripcion}} </mat-cell>
+                          </ng-container>
+                      
+                          <ng-container matColumnDef="Marca">
+                          <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+                          <mat-cell *matCellDef="let element"> {{element.Marca}} </mat-cell>
+                          </ng-container>
+                      
+  
+                          <ng-container matColumnDef="Cantidad">
+                              <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                              <mat-cell *matCellDef="let element"> {{element.Cantidad}} </mat-cell>
+                          </ng-container>
+  
+                          <ng-container matColumnDef="Caducidad">
+                              <mat-header-cell *matHeaderCellDef> Caducidad </mat-header-cell>
+                              <mat-cell *matCellDef="let element"> {{element.Caducidad}} </mat-cell>
+                          </ng-container>
+  
+                          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+  
+                  <br><br><div align="center"> <img src="https://ahlfenix.com/wp-content/uploads/2018/11/SET-INSTRUMENTAL-DE-SUTURA.jpg" width="150px"></div>
+                <div align="right"><button  >Editar</button></div> 
+              
+              </mat-expansion-panel>
+  
+  
+            </mat-accordion><!------           finaliza la parte deslizante             -------->
+  
+  
+      </mat-tab>
+  
+  
+  
+  
+  
+  
+      <mat-tab label="Creación de Set´s"> <!------           contenido de los dos botones              -------->
+       
+        <br> <div  style="display: flex;">
+          <div style=" width: 80%; margin-left:5%; margin-right: 5%;">
+            <label>Nombre:</label> <br>
+              <mat-form-field style=" width: 100%">
+           
+                <input matInput type="text" [(ngModel)]="value">
+                @if (value) {
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+                            }
+              </mat-form-field>  </div>
+                 <button   aria-label="submit" (click)="value2=value" style="margin-right: 5%;">Agregar</button>
+        
+            </div>
+  
+  
+          <div  style="display: flex;">
+            <div style=" width: 70%; margin-left:5%;">
+          <label>Elemento:</label><br>
+         <mat-form-field  style=" width: 100%">
+              <mat-select disableRipple>
+                <mat-option value="1">Pinza Halsted</mat-option>
+                <mat-option value="2">Pinza de Pean</mat-option>
+                <mat-option value="3">Pinza Judo-Allis</mat-option>
+                <mat-option value="4">Pinzas Kocher curvas</mat-option>
+                <mat-option value="5">Pinza de Kocher</mat-option>
+                <mat-option value="6">Pinza Mosquito</mat-option>
+                <mat-option value="7">Pinza para campo</mat-option>
+                <mat-option value="8">Pinza para tubo</mat-option>
+                <mat-option value="9">Grosmayer</mat-option>
+                <mat-option value="10">Pinza clamp</mat-option>
+              </mat-select>
+            </mat-form-field></div>
+  
+            <div style=" width: 10%; margin-left:1%; margin-right: 5%;">
+            <label >Cantidad:</label><br>
+            <mat-form-field style=" width: 100%">
+              <input matInput type="number" min="1"  step="1" value="1">
+            </mat-form-field>
+          </div>
+            <button style="margin-right: 5%;">Agregar</button>
+          </div>
+  
+
+          <div style="width: 100%; display: flex;">
+            <div style="width: 50%; margin-left:5%; margin-right: 5%;">
+              <h1>
+                <span  style="font-size: 1rem; ">Indica la cantidad en almacén: </span>
+              </h1>
+            </div>
+            <div style=" width: 16%; margin-left:1%; margin-right: 5%;">
+              <label >Mínimo:</label><br>
+              <mat-form-field style=" width: 100%">
+                <input matInput type="number" min="0"  step="1" value="1" [(ngModel)]="value3">
+              </mat-form-field>
+            </div>
+            <div style=" width: 16%; margin-left:1%; margin-right: 3%; ">
+              <label >Máximo:</label><br>
+              <mat-form-field style=" width: 100%">
+                <input matInput type="number" min="1"  step="1" value="1"  [(ngModel)]="value4">
+              </mat-form-field>
+            </div>
+            <div style=" width: 17%; margin-left:1%; margin-right: 5%;">
+            <button   aria-label="submit" (click)="value3_1=value3" (click)="value4_1=value4" class="u-dialog-link u-border-none u-btn u-button-style u-custom-color-3 u-hover-custom-color-6 u-text-hover-white" style="margin-left: 5%;">Agregar</button>
+          </div>
+          </div>
+
+
+
+        <div style="width: 100%; display: flex; margin-left:5%;">
+
+          <div style="width: 33.4%;">
+          <h1>
+            <span style="font-size: 1.5rem;  font-weight: 700;">{{value2}} </span>
+          </h1>
+        </div>
+
+        <div style="width: 33.3%;">
+          <h1>
+            <span  style="font-size: 1.5rem;  font-weight: 700;">Mínimo de Set´s: {{value3_1}} </span>
+          </h1>
+        </div>
+
+        <div style="width: 33.3%; margin-right: 5%;" >
+          <h1>
+            <span  style="font-size: 1.5rem;  font-weight: 700;">Máximo de Set´s: {{value4_1}} </span>
+          </h1>
+        </div>
+      
+      </div>
+
+      <p style="margin-left:5%;  font-weight: 400;"  class="u-text-custom-color-3" >Contenido:</p>
+  
+          <div style="width: 90%; margin-left: 5%; margin-right: 5px;">
+          <mat-table [dataSource]="dataSource4" class="mat-elevation-z8" >
+           
+              <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+              </ng-container>
+          
+              <ng-container matColumnDef="Nombre">
+              <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.Nombre}} </mat-cell>
+              </ng-container>
+          
+              <ng-container matColumnDef="Descripcion">
+              <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.Descripcion}} </mat-cell>
+              </ng-container>
+          
+              <ng-container matColumnDef="Marca">
+              <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.Marca}} </mat-cell>
+              </ng-container>
+          
+  
+              <ng-container matColumnDef="Cantidad">
+                  <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.Cantidad}} </mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="Caducidad">
+                  <mat-header-cell *matHeaderCellDef> Caducidad </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.Caducidad}} </mat-cell>
+              </ng-container>
+  
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+  
+         
+  
+      <br><br> <div style="text-align: center;">
+        <img id="imgPreview" class="imaencenter"></div>
+  <style>
+   .imaencenter{
+      align-items: center;
+      margin: auto;
+      width: 200px;
+      height: 150px;
+    }
+  </style>
+
+
+
+
+
+      
+        <input type="file" name="Examinar" accept="image/*" onchange="previewImage(event, '#imgPreview')">
+           
+
+            
+  
+  
+  
+          <a>Guardar</a>
+          <a>Cancelar</a>
+  
+  
+  
+      </mat-tab>
+    </mat-tab-group>
+  </div>
