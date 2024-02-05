@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DatosDeProgramacionComponent {
   labelPosition: 'media' | 'alta' = 'alta';
+  value = 'Clear me';
+
+
 }

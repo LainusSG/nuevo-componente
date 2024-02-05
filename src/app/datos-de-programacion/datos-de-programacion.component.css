@@ -1,3 +1,12 @@
+.alinear {
+    list-style-type: none;
+    overflow: hidden;
+    align-items: center; /* Para alinear items flexibles respecto al eje secundario */
+    justify-content: space-between;
+    display: flex;
+    
+  }
+  
 .example-section {
     display: flex;
     align-content: center;
@@ -8,3 +17,29 @@
   .example-margin {
     margin: 0 10px;
   }
+
+
+  .alinear-input {
+    width: 80%;
+    align-items: center; /* Para alinear items flexibles respecto al eje secundario */
+    align-content: center;
+  }
+
+  .input1 {
+    width: 380px;
+    height: 70px;
+  }
+
+  .input2 {
+    width: 380px;
+    height: 70px;
+  }
+
+
+  .textarea {
+    width: 100%;
+  }
+
+
+
+

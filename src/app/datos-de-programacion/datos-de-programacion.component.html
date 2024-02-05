@@ -1,4 +1,10 @@
-<section class="example-section">
+<div class="alinear" >
+
+  <h1>
+    Información de programación de cirugía
+  </h1>  
+
+  <section class="example-section">
     <label class="example-margin">Prioridad de la Cirugía:</label>
     <mat-radio-group [(ngModel)]="labelPosition">
       <mat-radio-button class="example-margin" value="alta">Alta</mat-radio-button>
@@ -6,3 +12,222 @@
       <mat-radio-button class="example-margin" value="baja">Baja</mat-radio-button>
     </mat-radio-group>
   </section>
+</div>
+
+
+
+<table class="alinear-input" align="center">
+<!------------------------------------------------------------              fila 1                                ----------------------------------------------------------------->
+  <tr>
+    <td>
+      <mat-label>Fecha de Cirugía: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input1">
+        <input matInput type="text" placeholder="22 de septiembre 2023" >
+        </mat-form-field>
+    </td>
+
+    <td>
+      <mat-label>Cirugía Programada: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input2">
+        <input matInput type="text" placeholder="Hernioplastía Inguinal Laparoscópica" >
+      </mat-form-field>
+    </td>
+  </tr>
+
+<!------------------------------------------------------------              fila 2                                ----------------------------------------------------------------->
+
+  <tr>
+    <td>
+      <mat-label>Paciente: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input1">
+        <input matInput type="text" placeholder="Hugo Rodríguez" >
+        </mat-form-field>
+    </td>
+
+    <td>
+      <mat-label>Solicita: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input2">
+        <input matInput type="text" placeholder="Dr. Pablo" >
+      </mat-form-field>
+    </td>
+  </tr>
+
+<!------------------------------------------------------------              fila 3                                ----------------------------------------------------------------->
+
+  <tr>
+    <td>
+      <mat-label>Edad: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input1">
+        <input matInput type="text" placeholder="35 años" >
+        </mat-form-field>
+    </td>
+
+    <td>
+      <mat-label>Médico cirujano: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input2">
+        <input matInput type="text" placeholder="Dra. Yazmin" >
+      </mat-form-field>
+    </td>
+  </tr>
+
+<!------------------------------------------------------------              fila 4                                ----------------------------------------------------------------->
+
+  <tr>
+    <td>
+      <mat-label>Fecha de Nacimiento: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input1">
+        <input matInput type="text" placeholder="7/01/1981" >
+        </mat-form-field>
+    </td>
+
+    <td>
+      <mat-label>Med. Anestesiólogo: &nbsp;</mat-label>
+    </td>
+
+    <td>
+      <mat-form-field class="input2">
+        <input matInput type="text" placeholder="Dr. Casimiro " >
+      </mat-form-field>
+    </td>
+  </tr>
+
+<!------------------------------------------------------------              fila 5                                ----------------------------------------------------------------->
+<tr>
+  <td>
+    <mat-label>Número de habitación: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input1">
+      <input matInput type="text" placeholder="204" >
+      </mat-form-field>
+  </td>
+
+  <td>
+    <mat-label>Tipo de Anestesia: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input2">
+      <input matInput type="text" placeholder="Epidural" >
+    </mat-form-field>
+  </td>
+</tr>
+
+<!------------------------------------------------------------              fila 6                                ----------------------------------------------------------------->
+
+<tr>
+  <td>
+    <mat-label>Sala: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input1">
+      <input matInput type="text" placeholder="Quirófano 2" >
+      </mat-form-field>
+  </td>
+
+  <td>
+    <mat-label>Ayudante / Residente: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input2">
+      <input matInput type="text" placeholder="Enf. Juanita" >
+    </mat-form-field>
+  </td>
+</tr>
+
+<!------------------------------------------------------------              fila 7                                ----------------------------------------------------------------->
+
+<tr>
+  <td>
+    <mat-label>Turno: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input1">
+      <input matInput type="text" placeholder="1" >
+      </mat-form-field>
+  </td>
+
+  <td>
+    <mat-label>Área de registro: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input2">
+      <input matInput type="text" placeholder="Jefatura de Quirófano" >
+    </mat-form-field>
+  </td>
+</tr>
+
+<!------------------------------------------------------------              fila 8                                ----------------------------------------------------------------->
+
+<tr>
+  <td>
+    <mat-label>Diagnóstico: &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input1">
+      <input matInput type="text" placeholder="Hernia Inguinal Bilateral" >
+      </mat-form-field>
+  </td>
+
+  <td>
+    <mat-label>Enfermera(o): &nbsp;</mat-label>
+  </td>
+
+  <td>
+    <mat-form-field class="input2">
+      <input matInput type="text" placeholder="Susana García" >
+    </mat-form-field>
+  </td>
+</tr> 
+</table>
+
+
+<table class="alinear-input" align="center"> 
+  <tr style="width: 100%;">
+    <td style="width: 14%;">
+      <mat-label>Notas Adicionales:</mat-label>
+    </td>
+    <td style="width: 86%;">
+      <mat-form-field class="textarea">
+        <textarea matInput placeholder="3 Pinzas H. extras para la cirugía "></textarea>
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+
+
+<h1>
+  Ingresa la información del equipamiento para la cirugía
+</h1>  
+
+
+<p align="center">
+  Requisición de Instrumental e Insumos
+</p>
