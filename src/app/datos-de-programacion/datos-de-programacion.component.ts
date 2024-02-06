@@ -12,6 +12,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {Elemento: 'Set 2', Cantidad:1, Descripcion: 'Set 2 para quirófano'},
   {Elemento: 'Set 3', Cantidad:1, Descripcion: 'Set 3 para quirófano'},
   {Elemento: 'Set 4', Cantidad:1, Descripcion: 'Set 4 para quirófano'},
+  {Elemento: 'Set 5', Cantidad:1, Descripcion: 'Set 4 para quirófano'},
+  {Elemento: 'Set 6', Cantidad:1, Descripcion: 'Set 4 para quirófano'},
 ];
 
 
@@ -26,7 +28,7 @@ export class DatosDeProgramacionComponent {
   value = 'Clear me';
 
 
-  displayedColumns: string[] = ['Elemento', 'Cantidad', 'Descripcion'];
+  displayedColumns: string[] = ['Elemento', 'Cantidad', 'Descripcion', 'icon'];
   dataSource = ELEMENT_DATA;
 
 }
