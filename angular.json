@@ -35,9 +35,10 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["src/assets/qr.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
