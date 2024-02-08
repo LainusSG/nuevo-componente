@@ -16,7 +16,10 @@
     width: 17.5cm;
     height: 23.9cm;
     margin-top: 1.5cm;
+    display: none;
   }
 
-
+.table{
+    margin-top: 5cm; position: absolute; width: 17.5cm;
+}
   

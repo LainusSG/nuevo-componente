@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { CargarScriptsService } from '../cargar-scripts.service';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -27,6 +29,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './imprimirpdf.component.css',
 })
 export class ImprimirpdfComponent {
+
+constructor ( private _CargarScripts:CargarScriptsService)
+{
+  _CargarScripts.carga (["qr"])
+}
+
 
   nombre='María Dolores Rodríguez Ramírez';
 

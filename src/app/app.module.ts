@@ -9,6 +9,7 @@ import { ImprimirpdfComponent } from './imprimirpdf/imprimirpdf.component';
 
 import {MatTableModule} from '@angular/material/table';
 
+import { CargarScriptsService } from './cargar-scripts.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {MatTableModule} from '@angular/material/table';
   ],
   providers: [
   
-
+CargarScriptsService
   ],
   bootstrap: [AppComponent]
 })

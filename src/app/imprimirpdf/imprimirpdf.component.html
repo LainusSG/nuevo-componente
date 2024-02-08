@@ -1,34 +1,34 @@
 
-<div id="content2">
-    <div id="areaImprimir">
-        <div id="contenedor">
-           
-            <div style="align-items: center; position: absolute; margin-left: 4.7cm; margin-top: 9cm;">
-                <img src="../../assets/Logooo.png" style="position: absolute; opacity: 40%; width: 8cm; height: 9cm;" >
+<div id="imprimible">
+    <div id="contenedor">
+           <div style="position: fixed;">
+            <div style="align-items: center; position: absolute; margin-left: 1.2cm; margin-top: 6cm; ">
+                <img src="../../assets/Logooo.png" style="position: absolute; opacity: 20%; width: 15cm; height: 16cm;" >
             </div>
             
             <div style="display: flex;">
                 <div>
-                    <img src="../../assets/Logooo.png" width="80px" height="80px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="../../assets/LOGO PNG NUTRICIÓN.png" width="80px" height="80px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div>
                     <h1 class="titulo">INSTITUTO NACIONAL DE CIENCIAS MÉDICAS Y NUTRICIÓN SALVADOR ZUBIRÁN</h1>
-                    <h1 class="titulo" [(ngModel)]="nombre">Subdirección de enfermería: {{nombre}}</h1>
+                    <h1 class="titulo"  [(ngModel)]="nombre">SUBDIRECCIÓN DE ENFERMERÍA: {{nombre}}</h1>
                     <h1 class="titulo">DEPARTAMENTO DE ENFERMERÍA</h1>
-                    <h1 class="titulo">BITÁCORA DE ESTERILIZACIÓN </h1>
+                    <h1 class="titulo">CENTRAL DE EQUIPOS Y ESTERILIZACIÓN</h1>
                 </div>
             </div>
-
-            <br>
-            <div>
+           <br> <div>
                 <h2 class="sub-titulo">
-                    Fecha de impresión: {{today | date }}
+                    Fecha de impresión: {{today | date:'medium' }}
                 </h2>
+            </div><br>
+            <div>
+                <h1 class="titulo2"> REPORTE DE INCIDENCIA</h1>
             </div>
+        </div><br>
     
-            <br> 
-        <div>
-                <table mat-table [dataSource]="dataSource" style="background-color: transparent;">
+
+                <table mat-table [dataSource]="dataSource" style="background-color: transparent;" class="table">
             
                 
                     <ng-container matColumnDef="position">
@@ -53,25 +53,25 @@
                     <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
                     </ng-container>
                 
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns" > </tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
-            </div>
+                <footer>
+                    TRACY &#169; {{today | date:'yyyy' }}
+                </footer>
         </div>
+
+       
     </div>
-</div>
 
 
 
 
 
-<div>
-<input type="button" onclick="printDiv('areaImprimir')" value="imprimir div" />
-
-<button class="btn btn-info" id="downloadPDF">Download PDF</button>
-</div>
 
 
 
 
 
+
+<button class="btn btn-primary"  id="btnImprimirDiv">Imprimir</button>
