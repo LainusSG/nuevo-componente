@@ -14,7 +14,7 @@ import { MatTableDataSource } from '@angular/material/table'
 })
 export class TablaComponent {
 
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns = ['position', 'name', 'weight', 'symbol','boton','icon'];
   dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
