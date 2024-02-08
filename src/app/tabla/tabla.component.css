@@ -1,0 +1,26 @@
+.listabicolor {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .listabicolor  tr:nth-child(even) {
+      background-color: white;
+    }
+  
+    .listabicolor tr:nth-child(odd) {
+        background-color: rgb(187, 221, 243);
+    }
+
+
+
+    .listabicolor {
+        border: rgba(232, 232, 232, 0.205) 1px solid;
+      }
+      tbody {
+        border:rgba(232, 232, 232, 0.205) 1px solid;
+      }
+      tr {
+        border: rgba(232, 232, 232, 0.205) 1px solid;
+      }
+      td {
+        border: rgba(232, 232, 232, 0.205) 1px solid;
+      }
