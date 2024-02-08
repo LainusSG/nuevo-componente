@@ -56,7 +56,6 @@ const ELEMENT_DATA: Element[] = [
   {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
   {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
   {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
-
   {position: 21, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 22, name: 'Helium', weight: 4.0026, symbol: 'He'},
   {position: 23, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -77,8 +76,6 @@ const ELEMENT_DATA: Element[] = [
   {position: 38, name: 'Argon', weight: 39.948, symbol: 'Ar'},
   {position: 39, name: 'Potassium', weight: 39.0983, symbol: 'K'},
   {position: 40, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
-
-
   {position: 41, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 42, name: 'Helium', weight: 4.0026, symbol: 'He'},
   {position: 43, name: 'Lithium', weight: 6.941, symbol: 'Li'},
