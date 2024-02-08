@@ -24,3 +24,10 @@
       td {
         border: rgba(232, 232, 232, 0.205) 1px solid;
       }
+
+
+
+      mat-paginator {
+        display: flex;
+        justify-content: center;
+      }
