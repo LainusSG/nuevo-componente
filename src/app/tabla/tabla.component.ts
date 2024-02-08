@@ -56,9 +56,48 @@ const ELEMENT_DATA: Element[] = [
   {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
   {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
   {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
+
+  {position: 21, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 22, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 23, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 24, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 25, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 26, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 27, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 28, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 29, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 30, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 31, name: 'Sodium', weight: 22.9897, symbol: 'Na'},
+  {position: 32, name: 'Magnesium', weight: 24.305, symbol: 'Mg'},
+  {position: 33, name: 'Aluminum', weight: 26.9815, symbol: 'Al'},
+  {position: 34, name: 'Silicon', weight: 28.0855, symbol: 'Si'},
+  {position: 35, name: 'Phosphorus', weight: 30.9738, symbol: 'P'},
+  {position: 36, name: 'Sulfur', weight: 32.065, symbol: 'S'},
+  {position: 37, name: 'Chlorine', weight: 35.453, symbol: 'Cl'},
+  {position: 38, name: 'Argon', weight: 39.948, symbol: 'Ar'},
+  {position: 39, name: 'Potassium', weight: 39.0983, symbol: 'K'},
+  {position: 40, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
+
+
+  {position: 41, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 42, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 43, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 44, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 45, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 46, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 47, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 48, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 49, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 50, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 51, name: 'Sodium', weight: 22.9897, symbol: 'Na'},
+  {position: 52, name: 'Magnesium', weight: 24.305, symbol: 'Mg'},
+  {position: 53, name: 'Aluminum', weight: 26.9815, symbol: 'Al'},
+  {position: 54, name: 'Silicon', weight: 28.0855, symbol: 'Si'},
+  {position: 55, name: 'Phosphorus', weight: 30.9738, symbol: 'P'},
+  {position: 56, name: 'Sulfur', weight: 32.065, symbol: 'S'},
+  {position: 57, name: 'Chlorine', weight: 35.453, symbol: 'Cl'},
+  {position: 58, name: 'Argon', weight: 39.948, symbol: 'Ar'},
+  {position: 59, name: 'Potassium', weight: 39.0983, symbol: 'K'},
+  {position: 60, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
 ];
 
-
-/**  Copyright 2017 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
