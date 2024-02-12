@@ -32,7 +32,7 @@ export class ImprimirpdfComponent {
 
 constructor ( private _CargarScripts:CargarScriptsService)
 {
-  _CargarScripts.carga (["qr"])
+  _CargarScripts.carga (["impresionreporte"])
 }
 
 

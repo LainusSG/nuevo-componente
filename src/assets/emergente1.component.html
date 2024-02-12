@@ -38,12 +38,26 @@
         </div>    
 
         <div class="espacio"></div>
-
-    
+                <mat-dialog-content class="mat-typography"  >
+            <div class="impresion">
+                    <div class="titulosemer"><h1 >Grafica de .... </h1></div>
+                        <div class="graficas">
+                            <ngx-charts-bar-vertical 
+                                [results]="dataset"
+                                [yAxisLabel]="'y-axis'"
+                                [xAxisLabel]="'x-axis'"
+                                [showXAxisLabel]="true"
+                                [showYAxisLabel]="true"
+                                [xAxis]="true"
+                                [yAxis]="true"
+                                >
+                            </ngx-charts-bar-vertical>
+                        </div> 
+                    </div>
             
             
-                    <div class="impresion">
-                            <div class="titulosemer1"><h1 >Tabla de .... </h1></div>
+                    <div class="impresion2">
+                            <div class="titulosemer2"><h1 >Tabla de .... </h1></div>
                             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="table">
 
                                 <ng-container matColumnDef="position">
@@ -70,7 +84,9 @@
                                 <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
                             </table>
                     </div>
-              
+                    
+                </mat-dialog-content>
+            
         
     </div>  
   
@@ -78,6 +94,7 @@
  
 
 
-       
+        <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
         <button mat-button  cdkFocusInitial id="btnImprimirDiv">imprimir</button>
-      
+        </mat-dialog-actions>
