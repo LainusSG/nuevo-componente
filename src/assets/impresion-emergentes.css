@@ -1,6 +1,8 @@
 
 /*
-
+El codigo de manera nativa tiene ocultos los encabezados de manera "displaY:none" para que al momento de estar en el html no mueva su contenido ni cambie la vista, po lo cual, debe
+copiar el css "imprimir pdf" al css de su proyecto, despues en el css "impresion-emergentes" cambie la clase de sus contenidos con un display none, a lo cual ya no se mostrarán
+en la impresion y quedarán solo los registros de la tabla, es por eso que se usaron dos css, uno para vista y otro para impresion de contenido.
 */
 
 #contenedor {    
