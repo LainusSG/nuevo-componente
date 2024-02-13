@@ -96,8 +96,6 @@ footer{
     height: 94%;
     display: block;
     position: static;
-    border: 1px solid black;    
-
 }
 
 
@@ -109,23 +107,104 @@ th{
 
 
 
+tr:nth-child(34):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+
+  tr:nth-child(68):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
 
 
+  tr:nth-child(102):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+  
 
-
+  tr:nth-child(136):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
   
 
 
+  tr:nth-child(170):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+  
+  tr:nth-child(204):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
 
 
 
+  tr:nth-child(238):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
 
 
 
+  tr:nth-child(272):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
 
 
 
+  tr:nth-child(306):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
 
 
+  tr:nth-child(340):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+
+  tr:nth-child(374):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
 
 
+  tr:nth-child(408):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+
+  tr:nth-child(442):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+
+  tr:nth-child(476):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
+
+  tr:nth-child(510):after{
+    page-break-after: always;
+    content: ' ';
+    display: block;
+  }
