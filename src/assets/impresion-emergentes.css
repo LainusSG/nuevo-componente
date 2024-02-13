@@ -64,8 +64,6 @@ footer{
 }
 
 
-
-
 .imagenfondo{
     margin-top: 20%;
     margin-left: 5.5%;
@@ -89,15 +87,23 @@ footer{
     align-self: center;
     align-content: center;
     
+    
 }
 
 
 
+.contenidoimpr{
+    height: 94%;
+    display: block;
+    position: static;
+    border: 1px solid black;    
 
+}
 
 
 th{
     padding-top: 5.5cm;
+
 }
    
 

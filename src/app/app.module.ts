@@ -24,7 +24,7 @@ import { CargarScriptsService } from './cargar-scripts.service';
   ],
   providers: [
   
-CargarScriptsService
+  CargarScriptsService
   ],
   bootstrap: [AppComponent]
 })
