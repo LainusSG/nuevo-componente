@@ -1,0 +1,19 @@
+.alinear-input {
+    width: 80%;
+    align-items: center; /* Para alinear items flexibles respecto al eje secundario */
+    align-content: center;
+  }
+
+  .input1 {
+    width: 380px;
+    height: 70px;
+  }
+
+  .input2 {
+    width: 380px;
+    height: 70px;
+  }
+
+
+
+  

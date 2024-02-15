@@ -1,0 +1,119 @@
+<table class="alinear-input" align="center" >
+    <!------------------------------------------------------------              fila 1                                ----------------------------------------------------------------->
+      <tr >
+        <td>
+          <mat-label>Fecha de Cirugía: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input matInput readonly="" value="{{ item.fecha_cirugia}}">
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>Hora: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input  matInput readonly="" value="{{today | date:'hh:mm a' }}">
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 2                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Dx Pre Operatorio: &nbsp;</mat-label>
+        </td>
+    
+        <td >
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input  matInput readonly="" value="{{ item.dx_pre_operatorio}}">
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>No.Qx &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input  matInput readonly=""  value="{{ item.No_qx}}">
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 3                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Entrega: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input  matInput readonly=""  value="{{ item.nombre_entrega}}">
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>ID: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input  matInput readonly="" value="{{ item.id_entrega}}">
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 4                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Recepción: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input  matInput readonly=""  value="{{ item.nombre_recepcion}}">
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>ID: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1" *ngFor="let item of dataSource">
+            <input  matInput readonly="" value="{{ item.id_recepcion}}">
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 5                                ----------------------------------------------------------------->
+    <tr>
+      <td>
+        <mat-label>Devolución: &nbsp;</mat-label>
+      </td>
+    
+      <td>
+        <mat-form-field class="input1" *ngFor="let item of dataSource">
+          <input  matInput readonly="" value="{{ item.nombre_devolucion}}">
+          </mat-form-field>
+      </td>
+    
+      <td>
+        <mat-label>ID: &nbsp;</mat-label>
+      </td>
+    
+      <td>
+        <mat-form-field class="input1" *ngFor="let item of dataSource">
+          <input  matInput readonly=""  value="{{ item.id_devolucion}}">
+        </mat-form-field>
+      </td>
+    </tr>
+    </table>
