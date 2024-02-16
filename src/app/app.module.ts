@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { Reporte1Component } from './reporte1/reporte1.component';
 
+
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +16,8 @@ import { Reporte1Component } from './reporte1/reporte1.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync()

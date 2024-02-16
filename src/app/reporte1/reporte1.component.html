@@ -1,2 +1,44 @@
-<h1>PDF Test</h1>
-<button type="button" (click)="createForm()">Generate PDF</button>
+
+<button type="button" (click)="createForm()">Generar Reporte</button>
+
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="ticket">
+      <th mat-header-cell *matHeaderCellDef> Ticket </th>
+      <td mat-cell *matCellDef="let element"> {{element.ticket}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cirugia">
+      <th mat-header-cell *matHeaderCellDef> Cirugía </th>
+      <td mat-cell *matCellDef="let element"> {{element.cirugia}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="sala">
+      <th mat-header-cell *matHeaderCellDef>  Sala </th>
+      <td mat-cell *matCellDef="let element"> {{element.sala}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="turno">
+        <th mat-header-cell *matHeaderCellDef> Turno </th>
+        <td mat-cell *matCellDef="let element"> {{element.turno}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="estatus">
+        <th mat-header-cell *matHeaderCellDef>  Estatus </th>
+        <td mat-cell *matCellDef="let element"> {{element.estatus}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+  
