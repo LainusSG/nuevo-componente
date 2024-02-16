@@ -42,7 +42,7 @@ const hora = date.getHours()
 const minutos = date.getMinutes()
 
 
-
+const nombreticket = recepcion_DATA
 @Component({
   selector: 'app-reporte1',
   templateUrl: './reporte1.component.html',
