@@ -2,38 +2,42 @@
 <button type="button" (click)="createForm()">Generar Reporte</button>
 
 
-
-
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="ticket">
-      <th mat-header-cell *matHeaderCellDef> Ticket </th>
-      <td mat-cell *matCellDef="let element"> {{element.ticket}} </td>
+  <ng-container matColumnDef="prioridad">
+    <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+    <td mat-cell *matCellDef="let element"> {{element.prioridad}} </td>
+  </ng-container>
+
+
+    <ng-container matColumnDef="caducidad">
+      <th mat-header-cell *matHeaderCellDef> Caducidad</th>
+      <td mat-cell *matCellDef="let element"> {{element.caducidad}} </td>
     </ng-container>
   
-    <ng-container matColumnDef="fecha">
-      <th mat-header-cell *matHeaderCellDef> Fecha </th>
-      <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+    <ng-container matColumnDef="recepcion">
+      <th mat-header-cell *matHeaderCellDef> Recepción </th>
+      <td mat-cell *matCellDef="let element"> {{element.recepcion}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="cirugia">
-      <th mat-header-cell *matHeaderCellDef> Cirugía </th>
-      <td mat-cell *matCellDef="let element"> {{element.cirugia}} </td>
+    <ng-container matColumnDef="qr">
+      <th mat-header-cell *matHeaderCellDef> QR </th>
+      <td mat-cell *matCellDef="let element"> {{element.qr}} </td>
     </ng-container>
   
-    <ng-container matColumnDef="sala">
-      <th mat-header-cell *matHeaderCellDef>  Sala </th>
-      <td mat-cell *matCellDef="let element"> {{element.sala}} </td>
+    <ng-container matColumnDef="proveedor">
+      <th mat-header-cell *matHeaderCellDef>  Proveedor </th>
+      <td mat-cell *matCellDef="let element"> {{element.proveedor}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="turno">
-        <th mat-header-cell *matHeaderCellDef> Turno </th>
-        <td mat-cell *matCellDef="let element"> {{element.turno}} </td>
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="estatus">
-        <th mat-header-cell *matHeaderCellDef>  Estatus </th>
-        <td mat-cell *matCellDef="let element"> {{element.estatus}} </td>
+      <ng-container matColumnDef="ubicacion">
+        <th mat-header-cell *matHeaderCellDef> Ubicación </th>
+        <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
       </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
