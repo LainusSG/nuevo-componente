@@ -94,7 +94,7 @@ const url = '../assets/PLANTILLA GENERAL.pdf'
   const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
   (document.getElementById(pdfDataUri) as HTMLInputElement).value
     
-
+  //document.getElementById('pdf').src = pdfDataUri;
     //--------------------------- Dejar de Borrar------------------------------------------
     this.saveByteArray('Reporte de Recepción - '+ dia+'/'+mes+'/'+año+' ('+ hora+ " horas" +' con '+ minutos+' minutos'+').pdf', pdfBytes); //-------- esta linea de codigo convierte la funcion de arriba en el formato reconocido por angulars
     
