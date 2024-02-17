@@ -50,10 +50,6 @@ export class Reporte1Component {
 
 
 
-
-
-
-
   async createPdf() {
 //--------------------------------- comenzar a borrar ------------------------------------------
 
@@ -84,9 +80,24 @@ const url = '../assets/PLANTILLA GENERAL.pdf'
   })
 
 
+  firstPage.drawText(recepcion1, {
+    x: 382,
+    y: height / 2 + 180,
+    size: 11,
+    font: helveticaFont,
+    color: rgb(0, 0, 0),
+  })
+
+
   const pdfBytes = await pdfDoc.save()
+
+  const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
+  (document.getElementById(pdfDataUri) as HTMLInputElement).value
+    
+
     //--------------------------- Dejar de Borrar------------------------------------------
     this.saveByteArray('Reporte de Recepción - '+ dia+'/'+mes+'/'+año+' ('+ hora+ " horas" +' con '+ minutos+' minutos'+').pdf', pdfBytes); //-------- esta linea de codigo convierte la funcion de arriba en el formato reconocido por angulars
+    
   }
 
 
@@ -98,4 +109,17 @@ const url = '../assets/PLANTILLA GENERAL.pdf'
     link.download = fileName;
     link.click();
   };
+
+
+
+
+
+
+
+
+
+
+
+
+  
 }

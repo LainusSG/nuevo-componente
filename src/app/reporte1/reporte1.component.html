@@ -1,7 +1,8 @@
 
 <button type="button" (click)="createPdf()">Generar Reporte</button>
 
-<iframe id="pdf" style="width: 30%; height: 50%;">{{createPdf}}</iframe>
+<iframe width="300" height="200" id="pdf"></iframe>
+
 
 <table #mytable mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
