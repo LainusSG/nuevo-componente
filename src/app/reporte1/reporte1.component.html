@@ -1,0 +1,49 @@
+
+<button type="button" (click)="createPdf()">Generar Reporte</button>
+
+<iframe id="pdf" style="width: 30%; height: 50%;">{{createPdf}}</iframe>
+
+<table #mytable mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="prioridad">
+    <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+    <td mat-cell *matCellDef="let element"> {{element.prioridad}} </td>
+  </ng-container>
+
+
+    <ng-container matColumnDef="caducidad">
+      <th mat-header-cell *matHeaderCellDef> Caducidad</th>
+      <td mat-cell *matCellDef="let element"> {{element.caducidad}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="recepcion">
+      <th mat-header-cell *matHeaderCellDef> Recepción </th>
+      <td mat-cell *matCellDef="let element"> {{element.recepcion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="qr">
+      <th mat-header-cell *matHeaderCellDef> QR </th>
+      <td mat-cell *matCellDef="let element"> {{element.qr}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="proveedor">
+      <th mat-header-cell *matHeaderCellDef>  Proveedor </th>
+      <td mat-cell *matCellDef="let element"> {{element.proveedor}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ubicacion">
+        <th mat-header-cell *matHeaderCellDef> Ubicación </th>
+        <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+  
