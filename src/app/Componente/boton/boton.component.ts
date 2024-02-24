@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DialogService } from '../../Service/dialog.service';
 
 @Component({
   selector: 'app-boton',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './boton.component.css'
 })
 export class BotonComponent {
+  constructor ( private dialogService: DialogService){}
 
+  emergente1(){
+    this.dialogService.emergente1()
+  }
 }
