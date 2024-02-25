@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { GeneradorQRComponent } from './generador-qr/generador-qr.component';
+
+const routes: Routes = [
+  { path: '1', component: GeneradorQRComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
