@@ -55,29 +55,16 @@ export class GeneradorQRComponent {
       pageSize: 'LETTER',
       pageMargins: [20, 270, 20, 80],
 
-     /* background: [
-        {
-          "image":"logo",
-            width: 100,
-            margin:[20,22,0,0]
-        },
-
-        {
-          "image":"logo",
-            width: 600,
-            margin:[-2,60,0,0],
-            opacity: 0.1
-        }
-      ],*/
+ 
 
       header:[
      
-     /*   {text: 'INSTITUTO NACIONAL DE CIENCIAS MÉDICAS NUTRICIÓN SALVADOR ZUBIRÁN', style: 'header2'},
+       {text: 'INSTITUTO NACIONAL DE CIENCIAS MÉDICAS NUTRICIÓN SALVADOR ZUBIRÁN', style: 'header2'},
         {text: 'SUBDIRECCIÓN DE ENFERMERÍA: ', style: 'header'},
         {text: 'DEPARTAMENTO DE ENFERMERÍA', style: 'header'},
         {text: 'CENTRAL DE EQUIPOS Y ESTERILIZACIÓN', style: 'header'},
         {text: 'Fecha de Impresión: '+fecha, style: 'header3'},
-        {text: 'ALMACÉN GENERAL', style: 'header2'}, */
+        {text: 'ALMACÉN GENERAL', style: 'header2'}, 
       
 
    
