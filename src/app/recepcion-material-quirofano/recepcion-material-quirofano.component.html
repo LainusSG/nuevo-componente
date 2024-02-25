@@ -1,1 +1,84 @@
-<p>recepcion-material-quirofano works!</p>
+<div align="center" style="width: 100%; display: flex; ">
+
+    <div style="width: 40%;">
+    <h1>Recepción</h1>
+    </div>
+
+
+    <div style="width: 40%; text-align: right; margin: auto; align-items: center; align-content: center; align-self: center; margin-top: 1%;">
+        <mat-form-field  >
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+    </div>
+
+
+    <div style="width: 20%; margin: auto; text-align: center;">
+    <button class="botones"  >Generar Reporte</button>
+    </div>
+
+
+</div>
+<br> <br> <br>
+<div align="center" style="width: 80%;  margin-left: 10%; margin-right: 10%;">
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="Ticket">
+          <th mat-header-cell *matHeaderCellDef> Ticket</th>
+          <td mat-cell *matCellDef="let element"> {{element.Ticket}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="Fecha">
+          <th mat-header-cell *matHeaderCellDef> Fecha </th>
+          <td mat-cell *matCellDef="let element"> {{element.Fecha}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Cirugia">
+          <th mat-header-cell *matHeaderCellDef> Cirugía </th>
+          <td mat-cell *matCellDef="let element"> {{element.Cirugia}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Sala">
+          <th mat-header-cell *matHeaderCellDef> Sala </th>
+          <td mat-cell *matCellDef="let element"> {{element.Sala}} </td>
+        </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Turno">
+            <th mat-header-cell *matHeaderCellDef> Turno </th>
+            <td mat-cell *matCellDef="let element"> {{element.Turno}} </td>
+          </ng-container>
+
+
+            <!-- Symbol Column -->
+        <ng-container matColumnDef="Estatus">
+            <th mat-header-cell *matHeaderCellDef> Estatus </th>
+            <td mat-cell *matCellDef="let element"> {{element.Estatus}} </td>
+          </ng-container>
+      
+
+          <ng-container matColumnDef="Accion">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Acción</th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"><button class="botones" >Recibir</button> </td>
+          </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
+
+  
+
+</div>
