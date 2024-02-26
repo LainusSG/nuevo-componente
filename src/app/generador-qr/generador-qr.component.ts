@@ -22,6 +22,13 @@ const turno = 1;
 })
 export class GeneradorQRComponent {
 
+Nombre='José Lino Santos García';
+Set='Set de Laparotomia';
+Fechacad='12/02/2023';
+Fechaprep='02/02/2023';
+
+infQR='pinzas lavadas';
+
 
   getBase64ImageFromURL(url: string) {
     return new Promise((resolve, reject) => {
@@ -52,28 +59,35 @@ export class GeneradorQRComponent {
  
     const pdfDefinition: any = {
 
-      pageSize: 'LETTER',
-      pageMargins: [20, 270, 20, 80],
-
+      pageSize: {
+    width: 196,
+    height: 98,
+  },
+      pageMargins: [ 0, 25, 0, 0 ],
+      pageOrientation: 'landscape',   
  
 
       header:[
      
-       {text: 'INSTITUTO NACIONAL DE CIENCIAS MÉDICAS NUTRICIÓN SALVADOR ZUBIRÁN', style: 'header2'},
-        {text: 'SUBDIRECCIÓN DE ENFERMERÍA: ', style: 'header'},
-        {text: 'DEPARTAMENTO DE ENFERMERÍA', style: 'header'},
-        {text: 'CENTRAL DE EQUIPOS Y ESTERILIZACIÓN', style: 'header'},
-        {text: 'Fecha de Impresión: '+fecha, style: 'header3'},
-        {text: 'ALMACÉN GENERAL', style: 'header2'}, 
-      
-
-   
-        
+      {text: 'INSTITUTO NACIONAL DE CIENCIAS MÉDICAS Y ', style: 'header2'},
+      {text: 'NUTRICIÓN SALVADOR ZUBIRÁN', style: 'header'},
       ],
 
       content: [
-        
-        
+      {text: 'Nombre:', style: 'titulo1'},
+      {text: this.Nombre, style: 'titulo2'},
+ 
+      {text: 'Set:', style: 'titulo1'},
+      {text: this.Set, style: 'titulo2'},
+      
+      {text: 'Fecha de Preparación:', style: 'titulo1'},
+      {text: this.Fechaprep, style: 'titulo2'},
+
+
+      {text: 'Fecha de Caducidad:', style: 'titulo1'},
+      {text: this.Fechacad, style: 'titulo2'},
+
+            { qr: this.infQR, fit: '65' ,position:'fixed',   margin: [48, -60, 0, 0],},
     ],
     
   images:{
@@ -83,57 +97,51 @@ export class GeneradorQRComponent {
     styles: {
 
       header: {
-        fontSize: 11,
+        fontSize: 6,
         bold: true,
-        margin: [40, 7, 0, 0],
+        margin: [7, 2, 0, 0],
         alignment: "center",
         color: 'black',
         position:'fixed',
       },
       header2: {
-        fontSize: 11,
+        fontSize: 6,
         bold: true,
-        margin: [40, 30, 0, 0],
-        alignment: "center",
-        color: 'black',
-        position:'fixed',
-       
-      },
-      header3: {
-        fontSize: 11,
-        bold: true,
-        margin: [0, 27, 30, 0],
-        alignment: "right",
-        color: 'black',
-        position:'fixed',
-      },
-      footer: {
-        fontSize: 10,
-        margin: [0, 20, 0, 0],
+        margin: [7, 8, 0, 0],
         alignment: "center",
         color: 'black',
         position:'fixed',
       },
-      tableExample: {
-        fontSize: 9,
+
+      titulo1: {
+        fontSize: 4,
         bold: true,
-        margin: [0, -15, 0, 0],
-        alignment : 'center',
-        color: 'black'
+        margin: [120, 6, 0, 0],
+        alignment: "left",
+        color: 'black',
+        position:'fixed',
       },
-    
+
+       titulo2: {
+        fontSize: 3.5,
+        bold: false,
+        margin: [120, 1, 0, 0],
+        alignment: "left",
+        color: 'black',
+        position:'fixed',
+      },
+ 
+ 
+     
     },
     
-    footer:[
-      
-      {text: 'TRACY © '+año, style: 'footer'},
-    ]
+
     }
       
     
  
     const pdf =  pdfMake.createPdf(pdfDefinition);
-    pdf.download('Reporte Almacén General '+ dia + '/'+mes2+'/'+año + ' ('+ hora + '/'+ minutos + 'hr)');
+    pdf.print();
 
     
   }
