@@ -1,0 +1,162 @@
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------- fila buscar ----------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<div align="center" style="align-items: center; align-content: center; ">
+    <mat-label>Buscar:</mat-label>
+    <mat-form-field class="input1">
+      <input matInput type="text" [(ngModel)]="value1">
+      @if (value1) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+    
+    <button mat-icon-button style="height: 50px; width: 50px; margin: auto;"
+        matTooltip="Buscar"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip">
+      <mat-icon style="font-size: 30px;" matTooltip="Buscar">search</mat-icon>
+    </button>
+
+
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------- fila 2 ----------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+<div style="display: flex; align-items: center;">
+    <div style=" width: 80%; margin-left:10%; margin-right: 10%;">
+      <label>Nombre:</label> <br>
+        <mat-form-field style=" width: 100%">
+     
+          <input matInput type="text" [(ngModel)]="value2" placeholder="ESTERILIZADOR 1">
+          @if (value2) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+            <mat-icon>close</mat-icon>
+          </button>
+                      }
+        </mat-form-field>  </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------- fila 3 ----------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+<div style="display: flex; align-items: center;">
+    <div style=" width: 80%; margin-left:10%; margin-right: 1%;">
+      <label>Marca:</label> <br>
+        <mat-form-field style=" width: 100%">
+     
+          <input matInput type="text" [(ngModel)]="value3">
+          @if (value3) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+            <mat-icon>close</mat-icon>
+          </button>
+                      }
+        </mat-form-field>  
+    </div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+<div style=" width: 100%; margin-left:1%; margin-right: 1%;">
+      <label>Modelo:</label> <br>
+        <mat-form-field style=" width: 100%">
+           
+            <input matInput type="text" [(ngModel)]="value4">
+             @if (value4) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="value4=''">
+                <mat-icon>close</mat-icon>
+            </button>
+                            }
+        </mat-form-field>  
+     </div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div style=" width: 100%; margin-left:1%; margin-right: 10%;">
+      <label>Número de serie:</label> <br>
+        <mat-form-field style=" width: 100%">
+           
+            <input matInput type="text" [(ngModel)]="value5">
+             @if (value5) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="value5=''">
+                <mat-icon>close</mat-icon>
+            </button>
+                            }
+        </mat-form-field>  
+     </div>
+</div>
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------- fila 4 ----------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+<div style="display: flex; align-items: center;">
+  <div style=" width: 80%; margin-left:10%; margin-right: 1%;">
+    <label>Ciclo Esterilizador:</label> <br>
+      <mat-form-field style=" width: 100%">
+   
+        <input matInput type="text" [(ngModel)]="value6">
+        @if (value6) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value6=''">
+          <mat-icon>close</mat-icon>
+        </button>
+                    }
+      </mat-form-field>  
+  </div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+<div style=" width: 100%; margin-left:1%; margin-right: 1%;">
+    <label>Tiempo del Ciclo:</label> <br>
+      <mat-form-field style=" width: 100%">
+         
+          <input matInput type="text" [(ngModel)]="value7">
+           @if (value7) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="value7=''">
+              <mat-icon>close</mat-icon>
+          </button>
+                          }
+      </mat-form-field>  
+   </div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+  <div style=" width: 100%; margin-left:1%; margin-right: 10%; text-align: center;">
+    <button class="botones" style=" margin-right: 20px; margin:auto;">Agregar</button>
+   </div>
+</div>
+
+<div style="display: flex; align-items: center;">
+    <div style=" width: 80%; margin-left:10%; margin-right: 10%;">
+      <label>Tiempo de Activación Prueba Bowie and Dick:</label> <br>
+        <mat-form-field style=" width: 100%">
+            <mat-select disableRipple >
+                <mat-option value="8" >8 hrs</mat-option>
+                <mat-option value="12" >12 hrs</mat-option>
+                <mat-option value="24" >24 hrs</mat-option>
+              </mat-select>
+        </mat-form-field>  </div>
+</div>
+
+
+<div style="display: flex; justify-content: right; padding-top: 20px; padding-right: 15%;">
+  <button class="botones" style=" margin-right: 20px;">Cancelar</button>
+  <button class="botones" style=" margin-right: 20px;">Guardar</button>
+</div>

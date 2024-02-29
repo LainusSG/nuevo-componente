@@ -1,0 +1,182 @@
+<div  style="display: flex;  align-items: center;">
+    <div style=" width: 40%; margin-left:5%;">
+  <label>Esterilizador:</label><br>
+ <mat-form-field  style=" width: 100%">
+      <mat-select disableRipple>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+      </mat-select>
+    </mat-form-field></div>
+
+    <div style=" width: 40%; margin-left:10%; margin-right: 5%;">
+    <label >Ciclo:</label><br>
+    <mat-form-field  style=" width: 100%">
+        <mat-select disableRipple [(ngModel)]="display" [(ngModel)]="value1">
+          <mat-option value="20" >Rápido</mat-option>
+          <mat-option value="36">Corto</mat-option>
+          <mat-option value="56">Estándar 134° C</mat-option>
+          <mat-option value="65">Estándar 121° C</mat-option>
+          <mat-option value="50">Especial Priones</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+  </div>
+
+ <br>
+
+  <div style=" width: 40%; margin-left:30%; margin-right:30%;">
+    <label >Ingresa QR:</label><br>
+    <mat-form-field  style=" width: 100%">
+            <input matInput type="text" placeholder="Ingresa QR" >
+            <mat-icon style="color:#0f8f95;" matIconSuffix>center_focus_weak</mat-icon>
+      </mat-form-field>
+    </div>
+  
+
+
+
+<br><br>
+<div  style="display: flex;  align-items: center;">
+    <div style=" width: 70%; margin-left:15%;margin-right: 15%;">
+<table mat-table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Paquete">
+      <th mat-header-cell *matHeaderCellDef> Paquete </th>
+      <td mat-cell *matCellDef="let element"> {{element.Paquete}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Icon">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Incidencia</th>
+        <td mat-cell *matCellDef="let element" style="text-align: center;"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="warning" style="color: gray"></mat-icon> </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+<br>
+<div  style="display: flex;  align-items: center;">
+    <div style=" width: 20%; margin-left:15%; text-align: right;">
+
+      <div align="center" style="font-size: 18px;"><h1 style="color: black; font-size: 20px;">Tiempo (min):</h1></div> <br>
+      
+      <div align="center" style="font-size: 18px;"><h1 style="color: black; font-size: 20px;">{{value1}}</h1></div> <br>
+
+</div>
+
+    <div style=" width: 20%;  text-align: left; font-size: 30px;">
+      <h1 style="color: black; font-size: 50px;">{{display}}</h1>
+    </div>
+  
+    <div style=" width: 30%;  text-align: left;">
+        <div style="display: flex; justify-content: right;">
+            <button class="botones" style=" margin-right: 20px;"  (click)="start()" [disabled]="bloquear" (click)="hacerSubmit()">Inicio</button>
+            <button class="botones" style=" margin-right: 20px;"  (click)="stop()" [disabled]="bloquear" (click)="hacerSubmit()">Paro</button>
+          </div>
+  
+    </div>
+  </div>
+
+
+  <br>
+  <div align="center">
+    <h1>Número de Ciclo Diario:  {{numciclo}}</h1>
+  </div>
+
+
+<br>
+
+
+
+  
+      <br>
+      <div  style="display: flex;  align-items: center;">
+        <div style=" width: 45%; margin-left:5%;">
+      <label>Ticket de  Prueba Biológica:</label><br>
+      <mat-form-field  style=" width: 100%">
+        <input matInput type="text" placeholder="Captura de Ticket">
+      </mat-form-field>
+    </div>
+    
+        <div style=" width: 45%; margin-left:5%; margin-right: 5%;">
+        <label >Número de Carga:</label><br>
+        <mat-form-field  style=" width: 100%">
+            <input matInput type="text" placeholder="Captura del Número de Carga">
+          </mat-form-field>
+        </div>
+      
+
+      </div>
+
+
+      <br>
+      <div  style="display: flex;  align-items: center;">
+        <div style=" width: 45%; margin-left:5%;">
+      <label>Prueba Biológica:</label><br>
+      <mat-form-field  style=" width: 100%">
+        <input matInput type="text" placeholder="Captura de QR">
+        <mat-icon style="color:#0f8f95;" matIconSuffix>center_focus_weak</mat-icon>
+      </mat-form-field>
+    </div>
+    
+        <div style=" width: 45%; margin-left:5%; margin-right: 5%;">
+        <label >Prueba Quimica:</label><br>
+        <mat-form-field  style=" width: 100%">
+            <input matInput type="text" placeholder="Captura de Folio">
+          </mat-form-field>
+        </div>
+      
+
+      </div>
+
+
+      <div style=" width: 100%; display: flex;">
+        <div style="display: flex; justify-content: center; width: 50%;">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="check_circle" style="color: green; width: 50px; height: 50px; font-size: 40px;"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="cancel" style="color: red; width: 50px; height: 50px; font-size: 40px;"></mat-icon>
+          </div>
+
+            <div style="display: flex; justify-content: center; width: 50%;">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="check_circle" style="color: green; width: 50px; height: 50px; font-size: 40px;"></mat-icon>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="cancel" style="color: red; width: 50px; height: 50px; font-size: 40px;"></mat-icon>
+              </div>
+    </div>
+
+
+    <br><br>
+
+  
+    <br>
+        <div style="text-align: center; display: flex; width: 100%;">
+          <div style="width: 50%; text-align: center;">
+            <button class="botones" style="margin-right: 2%; margin-left: 70%;">Generar Reporte</button>
+          </div>
+          <div style="width: 50%; text-align: center;">
+            <button class="botones" style="margin-left: 2%;margin-right: 70%;">Finalizar</button>
+          <div>
+        </div><br><br>
+      

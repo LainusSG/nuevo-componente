@@ -1,0 +1,165 @@
+<div class="contenedor">
+
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------->
+    <div class="componente1">
+      <br>
+      <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">Esterilizador 1</h1>
+        
+        <div style="display: flex; width: 100%; margin: auto; align-items: center; align-content: center; align-self: center; ">
+
+          <div style=" width: 20%; margin: auto; margin-left: 13%;">
+              <label style="font-weight: 600;">Estatus:</label>
+          </div>
+        <div style=" width: 80%;">
+            <mat-form-field  style=" width: 80%">
+                <mat-select disableRipple>
+                  <mat-option value="En Operación">En Operación</mat-option>
+                  <mat-option value="Ciclo Finalizado">Ciclo Finalizado</mat-option>
+                  <mat-option value="Disponible">Disponible</mat-option>
+                  <mat-option value="En Mantenimiento">En Mantenimiento</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div> 
+
+    <br>
+    <label style="margin-left:10%; font-weight: 600;">Prueba de Bowie & Dick:</label><br>
+    <div  align="center">
+    <mat-form-field  style=" width: 80%; padding-top: 2%;">
+      <input matInput type="text" placeholder="Introduzca Folio" [(ngModel)]="value1" [disabled]="disabledInput2">
+   
+      </mat-form-field>
+    </div> 
+        
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <mat-icon  (click)="disabledInput = false" (click)="disabledInput2 = true" aria-hidden="false" aria-label="Example home icon" fontIcon="check_circle" style="color: green; width: 60px; height: 60px; font-size: 60px; "></mat-icon>
+      &nbsp; &nbsp; &nbsp;
+      <mat-icon  (click)="disabledInput = true"  (click)="disabledInput2 = false"aria-hidden="false" aria-label="Example home icon" fontIcon="cancel" style="color: red; width: 60px; height: 60px; font-size: 60px; " ></mat-icon>
+    </div>
+
+
+
+
+
+
+    <br>
+        <div  align="center">
+          <a href="/1" style="border: none; color: white;"> <button class="botones" [disabled]="disabledInput" >Finalizado</button></a>
+ 
+        </div> <br>
+    </div>
+
+
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------->
+
+
+    <div class="componente2">
+     
+      <br>
+      <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">Esterilizador 2</h1>
+        
+        <div style="display: flex; width: 100%; margin: auto; align-items: center; align-content: center; align-self: center; ">
+
+          <div style=" width: 20%; margin: auto; margin-left: 13%;">
+              <label style="font-weight: 600;">Estatus:</label>
+          </div>
+        <div style=" width: 80%;">
+            <mat-form-field  style=" width: 80%">
+                <mat-select disableRipple>
+                  <mat-option value="En Operación">En Operación</mat-option>
+                  <mat-option value="Ciclo Finalizado">Ciclo Finalizado</mat-option>
+                  <mat-option value="Disponible">Disponible</mat-option>
+                  <mat-option value="En Mantenimiento">En Mantenimiento</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div> 
+
+    <br>
+    <label style="margin-left:10%; font-weight: 600;">Prueba de Bowie & Dick:</label><br>
+    <div  align="center">
+    <mat-form-field  style=" width: 80%; padding-top: 2%;">
+      <input matInput type="text" placeholder="Introduzca Folio" [(ngModel)]="value2" [disabled]="disabledInput4">
+   
+      </mat-form-field>
+    </div> 
+        
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <mat-icon  (click)="disabledInput3 = false" (click)="disabledInput4 = true" aria-hidden="false" aria-label="Example home icon" fontIcon="check_circle" style="color: green; width: 60px; height: 60px; font-size: 60px; "></mat-icon>
+      &nbsp; &nbsp; &nbsp;
+      <mat-icon  (click)="disabledInput3 = true"  (click)="disabledInput4 = false"aria-hidden="false" aria-label="Example home icon" fontIcon="cancel" style="color: red; width: 60px; height: 60px; font-size: 60px; " ></mat-icon>
+    </div>
+
+
+
+
+
+
+    <br>
+        <div  align="center">
+          <a href="/1" style="border: none; color: white;"> <button class="botones" [disabled]="disabledInput3" >Finalizado</button></a>
+ 
+        </div> <br>
+
+    </div>
+
+
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------->
+
+    <div class="componente3">
+     
+      <br>
+      <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">Esterilizador 3</h1>
+        
+        <div style="display: flex; width: 100%; margin: auto; align-items: center; align-content: center; align-self: center; ">
+
+          <div style=" width: 20%; margin: auto; margin-left: 13%;">
+              <label style="font-weight: 600;">Estatus:</label>
+          </div>
+        <div style=" width: 80%;">
+            <mat-form-field  style=" width: 80%">
+                <mat-select disableRipple>
+                  <mat-option value="En Operación">En Operación</mat-option>
+                  <mat-option value="Ciclo Finalizado">Ciclo Finalizado</mat-option>
+                  <mat-option value="Disponible">Disponible</mat-option>
+                  <mat-option value="En Mantenimiento">En Mantenimiento</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    </div> 
+
+    <br>
+    <label style="margin-left:10%; font-weight: 600;">Prueba de Bowie & Dick:</label><br>
+    <div  align="center">
+    <mat-form-field  style=" width: 80%; padding-top: 2%;">
+      <input matInput type="text" placeholder="Introduzca Folio" [(ngModel)]="value3" [disabled]="disabledInput6">
+   
+      </mat-form-field>
+    </div> 
+        
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <mat-icon  (click)="disabledInput5 = false" (click)="disabledInput6 = true" aria-hidden="false" aria-label="Example home icon" fontIcon="check_circle" style="color: green; width: 60px; height: 60px; font-size: 60px; "></mat-icon>
+      &nbsp; &nbsp; &nbsp;
+      <mat-icon  (click)="disabledInput5 = true"  (click)="disabledInput6 = false"aria-hidden="false" aria-label="Example home icon" fontIcon="cancel" style="color: red; width: 60px; height: 60px; font-size: 60px; " ></mat-icon>
+    </div>
+
+
+
+
+
+
+    <br>
+        <div  align="center">
+          <a href="/1" style="border: none; color: white;"> <button class="botones" [disabled]="disabledInput5" >Finalizado</button></a>
+ 
+        </div> <br>
+
+    </div>
+
+</div>
