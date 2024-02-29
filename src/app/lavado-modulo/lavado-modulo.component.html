@@ -1,0 +1,214 @@
+<div class="contenedor">
+
+    <div class="componente1">
+
+        <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">LAVADORA 1</h1>
+        <br>
+        <label style="margin-left:10%;">Ciclo:</label><br>
+        <div  align="center">
+        <mat-form-field  style=" width: 80%">
+          <mat-select disableRipple [(ngModel)]="display" [(ngModel)]="value1">
+            <mat-option value="20" >Rápido</mat-option>
+            <mat-option value="36">Corto</mat-option>
+            <mat-option value="56">Estándar 134° C</mat-option>
+            <mat-option value="65">Estándar 121° C</mat-option>
+            <mat-option value="50">Especial Priones</mat-option>
+          </mat-select>
+          </mat-form-field>
+        </div> 
+
+        <br>
+        <div  align="center">
+        <p >Tiempo (min): &nbsp;&nbsp;&nbsp; {{value1}}</p>
+        <h1>{{display}}</h1>
+        </div> 
+
+        
+        <div style="display: flex; justify-content: center; margin-bottom: 3%;">
+            <button class="botones" style=" margin-right: 10%;"  (click)="start()" [disabled]="bloquear1" (click)="hacerSubmit1()">Inicio</button>
+            <button class="botones"  (click)="stop()" [disabled]="bloquear1" (click)="hacerSubmit1()">Paro</button>
+          </div>
+    </div>
+
+    <div class="componente2">
+        <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">LAVADORA 2</h1>
+        <br>
+        <label style="margin-left:10%;">Ciclo:</label><br>
+        <div  align="center">
+        <mat-form-field  style=" width: 80%">
+          <mat-select [(ngModel)]="display2" [(ngModel)]="value2">
+            <mat-option value="20" >Rápido</mat-option>
+            <mat-option value="36">Corto</mat-option>
+            <mat-option value="56">Estándar 134° C</mat-option>
+            <mat-option value="65">Estándar 121° C</mat-option>
+            <mat-option value="50">Especial Priones</mat-option>
+          </mat-select>
+          </mat-form-field>
+        </div> 
+
+        <br>
+        <div  align="center">
+        <p >Tiempo (min): &nbsp;&nbsp;&nbsp; {{value2}}</p>
+        <h1>{{display2}}</h1>
+        </div> 
+
+        
+        <div style="display: flex; justify-content: center; margin-bottom: 3%;">
+            <button class="botones" style=" margin-right: 10%;"  (click)="start2()" [disabled]="bloquear2" (click)="hacerSubmit2()">Inicio</button>
+            <button class="botones"  (click)="stop2()" [disabled]="bloquear2" (click)="hacerSubmit2()">Paro</button>
+          </div>
+    </div>
+
+
+    <div class="componente3">
+        <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">LAVADORA 3</h1>
+        <br>
+
+        <label style="margin-left:10%;">Ciclo:</label><br>
+        <div  align="center">
+        <mat-form-field  style=" width: 80%">
+          <mat-select disableRipple [(ngModel)]="display3" [(ngModel)]="value3">
+            <mat-option value="20" >Rápido</mat-option>
+            <mat-option value="36">Corto</mat-option>
+            <mat-option value="56">Estándar 134° C</mat-option>
+            <mat-option value="65">Estándar 121° C</mat-option>
+            <mat-option value="50">Especial Priones</mat-option>
+          </mat-select>
+          </mat-form-field>
+        </div> 
+
+        <br>
+        <div  align="center">
+        <p >Tiempo (min): &nbsp;&nbsp;&nbsp; {{value3}}</p>
+        <h1>{{display3}}</h1>
+        </div> 
+
+        
+        <div style="display: flex; justify-content: center; margin-bottom: 3%;">
+            <button class="botones" style=" margin-right: 10%;"  (click)="start3()" [disabled]="bloquear3" (click)="hacerSubmit3()">Inicio</button>
+            <button class="botones"  (click)="stop3()" [disabled]="bloquear3" (click)="hacerSubmit3()">Paro</button>
+          </div>
+    </div>
+
+
+</div>
+
+
+<div class="contenedor">
+
+    <div class="componente4">
+
+        <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">Contenido</h1>
+       
+        <div  align="center">
+            <table mat-table [dataSource]="dataSource1" >
+
+
+                <ng-container matColumnDef="Nombre">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Nombre </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Nombre}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Caducidad">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Caducidad </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Caducidad}} </td>
+                </ng-container>
+              
+              
+                <ng-container matColumnDef="icon">
+                    <th mat-header-cell *matHeaderCellDef style="background-color: white;"> </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="warning" style="color: gray"></mat-icon> </td>
+                  </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+              </table>
+        </div> 
+
+        <br>
+        <div  align="center">
+            <button class="botones" >Finalizado</button>
+ 
+        </div> 
+
+      
+    </div>
+
+    <div class="componente5">
+      
+        <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">Contenido</h1>
+       
+        <div  align="center">
+            <table mat-table [dataSource]="dataSource2" >
+
+
+                <ng-container matColumnDef="Nombre">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Nombre </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Nombre}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Caducidad">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Caducidad </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Caducidad}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="icon">
+                    <th mat-header-cell *matHeaderCellDef style="background-color: white;"> </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="warning" style="color: gray"></mat-icon> </td>
+                  </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table>
+        </div> 
+
+        <br>
+        <div  align="center">
+            <button class="botones" >Finalizado</button>
+ 
+        </div> 
+
+     
+    </div>
+
+
+    <div class="componente6">
+    
+        <h1 align="center" style="font-size: 18px; padding-bottom: 3%;">Contenido</h1>
+       
+        <div  align="center">
+            <table mat-table [dataSource]="dataSource3" >
+
+
+                <ng-container matColumnDef="Nombre">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Nombre </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Nombre}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Caducidad">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Caducidad </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.Caducidad}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="icon">
+                    <th mat-header-cell *matHeaderCellDef style="background-color: white;"> </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="warning" style="color: gray"></mat-icon> </td>
+                  </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+              </table>
+        </div> 
+
+        
+
+        <br>
+        <div  align="center">
+            <button class="botones" >Finalizado</button>
+ 
+        </div> 
+
+</div>

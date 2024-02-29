@@ -1,0 +1,92 @@
+.contenedor{
+    width: 100%;
+    display: flex;
+
+}
+
+.componente1{
+    margin-left: 2.5%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 1.25%;
+    border: 1px solid black;
+
+    
+    align-items: center;
+    align-items: center;
+}
+
+.componente2{
+    margin-left: 1.25%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 1.25%;
+    height: 10%;
+    border: 1px solid black;
+}
+
+.componente3{
+    margin-left: 1.25%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 2.5%;
+    height: 10%;
+    border: 1px solid black;
+}
+
+
+
+
+.componente4{
+    margin-left: 2.5%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 1.25%;
+
+    
+    align-items: center;
+    align-items: center;
+}
+
+.componente5{
+    margin-left: 1.25%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 1.25%;
+    height: 10%;
+}
+
+.componente6{
+    margin-left: 1.25%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 2.5%;
+    height: 10%;
+}
+
+.botones {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #0f8f95;
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+
+.botones:hover {
+    text-align: center;
+    background-color: #38b6ff;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+
+.tablacomponente{
+    align-items: center;
+    margin: auto;
+    display: grid;
+}
