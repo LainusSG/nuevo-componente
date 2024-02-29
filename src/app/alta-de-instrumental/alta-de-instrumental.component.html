@@ -1,0 +1,190 @@
+
+<br><h1 style="margin-left: 5%;"> Control de Material </h1>
+<div align="center" style="align-items: center; align-content: center; ">
+    <mat-label>Buscar:</mat-label>
+    <mat-form-field class="input1">
+      <input matInput type="text" [(ngModel)]="value1">
+      @if (value1) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+    
+    <button mat-icon-button style="height: 50px; width: 50px; margin: auto;"
+        matTooltip="Buscar"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip">
+      <mat-icon style="font-size: 30px;" matTooltip="Buscar">search</mat-icon>
+    </button>
+
+
+</div>
+<br><br>
+
+<div style=" display: flex; width: 90%; margin-left: 5%; margin-right: 5%; ">
+
+    <div style="width: 40%;">
+   
+        <div align="center" style="height: 100%; width: 100%; align-items: center; display: grid;">
+            <div style="text-align: center; margin-top: 15%;">
+                <img src="http://tracy_fe.smartest.mx/assets/images/WhatsAppImage2023-12-07at11.13.14AM.jpeg" width="150px" >
+            </div>
+            <button class="botones" style=" margin:auto; margin-bottom: 15%;">Examinar</button>
+
+        </div>
+
+    </div>
+
+    <div style="width: 60%; ">
+
+            <div style="display: flex; width: 100%;">
+
+  
+                <div style=" width: 50%; margin-left:5%; margin-right: 2.5%;">
+                <label>ID:</label> <br>
+                    <mat-form-field style=" width: 100%">
+                
+                    <input matInput type="text" [(ngModel)]="value2" placeholder="11312">
+                    @if (value2) {
+                    <button matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                                }
+                    </mat-form-field>  
+                </div>
+            
+                <div style=" width: 50%; margin-left:2.5%; margin-right: 5%;">
+                    <label>QR:</label> <br>
+                        <mat-form-field style=" width: 100%">
+                        
+                            <input matInput type="text" [(ngModel)]="value3" placeholder="---">
+                            @if (value3) {
+                            <button matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+                                <mat-icon>close</mat-icon>
+                            </button>
+                                            }
+                        </mat-form-field>  
+                </div>
+            
+           
+             </div>
+
+
+
+                <div style=" width: 100%; margin-left:5%; margin-right: 5%;">
+                  <label>Nombre:</label> <br>
+                    <mat-form-field style=" width: 90%">
+                 
+                      <input matInput type="text" [(ngModel)]="value4" placeholder="Pinzas Pequeñas">
+                      @if (value4) {
+                      <button matSuffix mat-icon-button aria-label="Clear" (click)="value4=''">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                                  }
+                    </mat-form-field>  </div>
+
+
+                    <div style=" width: 100%; margin-left:5%; margin-right: 5%;">
+                        <label>Clasificación:</label> <br>
+                          <mat-form-field style=" width: 90%">
+                            <mat-select disableRipple >
+                                <mat-option value="1" >Instrumental</mat-option>
+                                <mat-option value="2" >Equipo</mat-option>
+                                <mat-option value="3" >Item 3</mat-option>
+                              </mat-select>
+                          </mat-form-field>  </div>
+        
+                          
+
+
+                          <div style=" width: 100%; margin-left:5%; margin-right: 5%;">
+                            <label>Marca:</label> <br>
+                              <mat-form-field style=" width: 90%">
+                           
+                                <input matInput type="text" [(ngModel)]="value5" placeholder="URREA">
+                                @if (value5) {
+                                <button matSuffix mat-icon-button aria-label="Clear" (click)="value5=''">
+                                  <mat-icon>close</mat-icon>
+                                </button>
+                                            }
+                              </mat-form-field>  </div>
+                  
+        
+
+                              <div style=" width: 100%; margin-left:5%; margin-right: 5%;">
+                                <label>Lote:</label> <br>
+                                  <mat-form-field style=" width: 90%">
+                               
+                                    <input matInput type="text" [(ngModel)]="value6" placeholder="Número de Lote">
+                                    @if (value6) {
+                                    <button matSuffix mat-icon-button aria-label="Clear" (click)="value6=''">
+                                      <mat-icon>close</mat-icon>
+                                    </button>
+                                                }
+                                  </mat-form-field>  </div>
+
+
+
+     </div>
+
+
+
+
+
+
+     
+</div>
+
+
+<div style="display: flex; justify-content: right; padding-top: 20px; padding-right: 6%;">
+    <button class="botones" style=" margin-right: 20px;">Cancelar</button>
+    <button class="botones" style=" margin-right: 20px;">Guardar</button>
+  </div>
+
+
+
+  <div style=" width: 90%; margin-left:5%; margin-right: 5%; margin-top: 5%;">
+
+  <table mat-table [dataSource]="dataSource">
+
+    
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="Nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nombre}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="Clasificacion">
+      <th mat-header-cell *matHeaderCellDef> Clasificación </th>
+      <td mat-cell *matCellDef="let element"> {{element.Clasificacion}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="Marca">
+      <th mat-header-cell *matHeaderCellDef> Marca </th>
+      <td mat-cell *matCellDef="let element"> {{element.Marca}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="Lote">
+        <th mat-header-cell *matHeaderCellDef> Lote </th>
+        <td mat-cell *matCellDef="let element"> {{element.Lote}} </td>
+      </ng-container>
+
+      
+    <ng-container matColumnDef="Caducidad">
+        <th mat-header-cell *matHeaderCellDef> Caducidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.Caducidad}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
