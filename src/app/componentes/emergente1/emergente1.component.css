@@ -1,0 +1,23 @@
+.titulo{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center ;
+}
+
+.sub-titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: right ;
+}
+
+
+.titulosemer{
+  text-align: center;
+}
+
+  .back {
+    display: none;
+  }
+
+

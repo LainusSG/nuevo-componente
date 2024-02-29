@@ -1,0 +1,10 @@
+.graficas{
+    width: 100%;
+    margin: auto !important; 
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center ;
+    align-self: center;
+    align-content: center;
+}

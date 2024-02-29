@@ -1,0 +1,338 @@
+<!----------------------------------------------------------------------- 1 fila ------------------------------------------------------------------------->    
+
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Paquetes procesados por turno y operador
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker1">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker1></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente1()" >ok</button>
+        </mat-expansion-panel>
+</div> <div>
+        <mat-expansion-panel class="botonconfirm">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Cuantas solicitudes de otras áreas hospitalarias
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+            <p>Selecciona el rango de tiempo</p>
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker2">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker2></mat-date-range-picker>
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="emergente2()" >ok</button>
+        </mat-expansion-panel>
+</div></div>   
+
+<!----------------------------------------------------------------------- 2 fila ------------------------------------------------------------------------->
+
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Productividad por quirófano
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker3">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker3></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente3()" >ok</button>
+        </mat-expansion-panel>
+</div> <div>
+        <mat-expansion-panel  class="botonconfirm">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Indicador de solicitudes de esterilización
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+            <p>Selecciona el rango de tiempo</p>
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker4">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker4></mat-date-range-picker>
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="emergente4()" >ok</button>
+        </mat-expansion-panel>
+</div></div>      
+
+<!----------------------------------------------------------------------- 3 fila ------------------------------------------------------------------------->
+
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Mermas por caducidad
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker5">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker5></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente5()" >ok</button>
+        </mat-expansion-panel>
+</div> <div> 
+        <mat-expansion-panel  class="botonconfirm">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Ciclos de esterilización parados
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+            <p>Selecciona el rango de tiempo</p>
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker6">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker6"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker6></mat-date-range-picker>
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="emergente6()" >ok</button>
+        </mat-expansion-panel>
+</div></div>  
+
+<!----------------------------------------------------------------------- 4 fila ------------------------------------------------------------------------->
+
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Tipos de paquetes procesados por turno
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker7">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker7></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente7()" >ok</button>
+        </mat-expansion-panel>
+</div> <div> 
+        <mat-expansion-panel class="botonconfirm">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Indicador de prioridad de paquetes
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+            <p>Selecciona el rango de tiempo</p>
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker8">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker8"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker8></mat-date-range-picker>
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="emergente8()" >ok</button>
+        </mat-expansion-panel>
+</div></div> 
+
+<!----------------------------------------------------------------------- 5 fila ------------------------------------------------------------------------->
+
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Cantidad de cirugías por doctor y quirófano
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker9">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker9></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente9()" >ok</button>
+        </mat-expansion-panel>
+</div> <div>    
+        <mat-expansion-panel class="botonconfirm">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Uso de esterilizador
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+            <p>Selecciona el rango de tiempo</p>
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker10">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker10"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker10></mat-date-range-picker>
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="emergente10()" >ok</button>
+        </mat-expansion-panel>
+</div></div>    
+
+<!----------------------------------------------------------------------- 6 fila ------------------------------------------------------------------------->
+
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Paquetes por esterilizador
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker11">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker11"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker11></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente11()" >ok</button>
+        </mat-expansion-panel>
+</div> <div>       
+        <mat-expansion-panel  class="botonconfirm">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Número de pruebas de esterilización
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+            <p>Selecciona el rango de tiempo</p>
+          <mat-form-field>
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker12">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker12"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker12></mat-date-range-picker>
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="emergente12()" >ok</button>
+        </mat-expansion-panel>
+</div></div>      
+
+<!----------------------------------------------------------------------- 7 fila ------------------------------------------------------------------------->
+<div class="example-button-row"><div>
+        <mat-expansion-panel  class="botonconfirm">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Tiempo del paquete Fuera de CEyE
+            </mat-panel-title>
+          </mat-expansion-panel-header >
+
+          <div>
+            <p>Selecciona el rango de tiempo</p>
+          
+
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker13">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker13"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker13></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+
+            <br>
+            
+          <button mat-raised-button color="primary" (click)="emergente13()" >ok</button>
+        </mat-expansion-panel>
+ </div></div>    
+    
+    
+      

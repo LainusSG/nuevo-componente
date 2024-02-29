@@ -1,0 +1,87 @@
+
+        <div style="display: flex;     text-align: center ;
+        align-items: center;
+        align-self: center;
+        align-content: center; place-content: center;">
+
+            <div class="graficas">
+                <h1 style="font-size: 12px; text-align: center;">Paquetes procesados por turno y operador</h1>
+                <ngx-charts-bar-horizontal
+                [view]="[400,250]"
+                [results]="Paquetes_procesados_por_turno_y_operador "
+                [yAxisLabel]="'Operador'"
+                [xAxisLabel]="'Área'"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [animations]="true"
+                [scheme]="colorScheme"
+                >
+            </ngx-charts-bar-horizontal>
+            </div>
+            <div class="graficas">
+                <h1 style="font-size: 12px; text-align: center;">Productividad por quirófano</h1>
+                <ngx-charts-bar-vertical 
+                [view]="[400,250]"
+                [results]="Productividad_por_quirofano "
+                [yAxisLabel]="'Número de quirófano'"
+                [xAxisLabel]="'Atendidas y pendientes'"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [scheme]="colorScheme"
+                >
+                </ngx-charts-bar-vertical>
+            </div>
+            <div class="graficas">
+                <h1 style="font-size: 12px; text-align: center;">Mermas por caducidad</h1>
+                <ngx-charts-pie-chart 
+                [view]="[400,250]"
+                [results]="Mermas_por_caducidad"
+                [labels]="true"
+                [animations]="true"
+                [scheme]="colorScheme"
+                >
+                </ngx-charts-pie-chart>
+            </div>
+        </div>
+
+
+
+
+        
+        <div style="display: flex; text-align: center">
+
+            <div class="graficas">
+                <h1 style="font-size: 12px; text-align: center;">Tipos de paquetes procesados por turno</h1>
+                <ngx-charts-number-card 
+                [view]="[400,250]"
+                [results]="Tipos_de_paquetes_procesados_por_turno "
+                [animations]="true"
+                [scheme]="colorScheme"
+                >
+            </ngx-charts-number-card >
+            </div>
+            <div class="graficas">
+                <h1 style="font-size: 12px; text-align: center;">Cantidad de cirugías por doctor y quirófano</h1>
+                <ngx-charts-advanced-pie-chart 
+                [view]="[450,250]"
+                [results]="Cantidad_de_cirugias_por_doctor_y_quirofano"
+                [animations]="true"
+                [scheme]="colorScheme"
+                >
+            </ngx-charts-advanced-pie-chart>
+            </div>
+            <div class="graficas">
+                <h1 style="font-size: 12px; text-align: center;">Paquetes por esterilizador</h1>
+            <ngx-charts-pie-grid
+                [view]="[400,250]"
+                [results]="Paquetes_por_esterilizador"
+                [animations]="true"
+                [scheme]="colorScheme"
+             >
+            </ngx-charts-pie-grid>
+            </div>
+        </div>
