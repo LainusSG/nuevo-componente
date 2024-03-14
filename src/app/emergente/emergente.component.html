@@ -1,0 +1,39 @@
+<div style="width: 800px;">
+
+    <div align="center">
+        <h1>Reporte de Incidencias</h1>
+     </div>
+    
+ 
+  
+    
+  
+    <div style="width: 100%; display: flex;">
+     
+        <div style="width: 35%;  margin-left: 10%;" >
+            <section class="example-section" >
+                <div style="width: 50%;text-align: center;"><h4>Categoría:</h4></div>
+
+                <mat-radio-group [(ngModel)]="labelPosition">
+                    <mat-radio-button class="example-margin" value="after">Incompleto</mat-radio-button><br>
+                    <mat-radio-button class="example-margin" value="before">Perdida</mat-radio-button><br>
+                    <mat-radio-button class="example-margin" value="before">Mantenimiento</mat-radio-button><br>
+                    <mat-radio-button class="example-margin" value="before">Falla</mat-radio-button><br>   
+                  </mat-radio-group>
+              </section>
+        </div>
+        
+        <div style="text-align: center; width: 65%; align-items: center;">
+            <h4>Reporte:</h4>
+            <mat-form-field style="width: 90%; margin-left: 2%; margin-right: 8%; margin-bottom: 15%; ;">
+                
+                <textarea matInput placeholder="Ingrese su reporte" style="width: 100%;"></textarea>
+              </mat-form-field>
+        </div>
+    </div><br>
+        
+        <div style="display: flex; width: 100%;">
+            <div style="text-align: center; width: 50%;"> <button   aria-label="submit"  class="botones">Cancelar</button></div>
+            <div style="text-align: center; width: 50%;"> <button   aria-label="submit"  class="botones">Confirmar</button></div>
+        </div><br>
+</div>

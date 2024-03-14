@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { EmergenteBotonComponent } from './emergente-boton/emergente-boton.component';
+const routes: Routes = [
+  { path:'1', component:EmergenteBotonComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
