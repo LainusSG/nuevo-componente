@@ -24,7 +24,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule }   from '@angular/forms';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,8 @@ import { FormsModule }   from '@angular/forms';
     MatButtonModule,
     MatCheckboxModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync()
