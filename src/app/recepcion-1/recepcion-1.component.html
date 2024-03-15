@@ -1,0 +1,332 @@
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+<h1>Vales a la CEyE por Material, Equipo o Instrumental</h1>
+</div>
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+    <div style="width: 50%; text-align: left;">
+        <h1>Registro</h1>
+    </div>
+    <div style="width: 50%; text-align: right;">
+        <h1>Ticket {{ticket}}</h1>
+    </div>
+</div>
+
+
+
+
+<table class="alinear-input" align="center">
+    <!------------------------------------------------------------              fila 1                                ----------------------------------------------------------------->
+      <tr>
+        <td>
+          <mat-label>Fecha de Cirugía: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1">
+            <input matInput type="text" placeholder="22 de septiembre 2023" >
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>Hora: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input matInput type="text" placeholder="13:11" >
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 2                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Dx Pre Operatorio: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1">
+            <input matInput type="text" placeholder="" >
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>No.Qx: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input matInput type="text" placeholder="2" >
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 3                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Entrega: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1">
+            <input matInput type="text" placeholder="Casimiro Gomez" >
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>ID: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input matInput type="text" placeholder="123452" >
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 4                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Recepción: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1">
+            <input matInput type="text" placeholder="José Lino" >
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>ID: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input matInput type="text" placeholder="783516" >
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 5                                ----------------------------------------------------------------->
+    <tr>
+      <td>
+        <mat-label>Devolución: &nbsp;</mat-label>
+      </td>
+    
+      <td>
+        <mat-form-field class="input1">
+          <input matInput type="text" placeholder="Yaz Huerta" >
+          </mat-form-field>
+      </td>
+    
+      <td>
+        <mat-label>ID: &nbsp;</mat-label>
+      </td>
+    
+      <td>
+        <mat-form-field class="input2">
+          <input matInput type="text" placeholder="561432" >
+        </mat-form-field>
+      </td>
+    </tr>
+    
+
+</table><br>
+
+
+
+<!------------------------------------------------------- TARJETA DE INDENTIFICACION ------------------------------------->
+    <div style="text-align: center;">
+         <h1>Tarjeta de Identificación de Dispositivos Médicos</h1>
+    </div><br>
+
+
+
+    <div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+       <div style="width: 70%; text-align: right;"> <h1>Fecha: {{fecha}}</h1></div>
+       <div style="width: 17%; text-align: right;"> <h1>Hora: {{hora}}</h1></div>
+       <div style="width: 13%; text-align: right;"> <h1>Turno: {{turno}}</h1></div>
+   </div><br>
+
+
+
+    <div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+        <h1>Instrumental Quirúrgico Sencillo</h1>
+    </div>
+
+
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+
+    <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element; let i = dataSource1"> {{element.Id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="Instrumental">
+          <th mat-header-cell *matHeaderCellDef> Instrumental </th>
+          <td mat-cell *matCellDef="let element"> {{element.Instrumental}} </td>
+        </ng-container>
+      
+ 
+        <ng-container matColumnDef="Cantidad">
+          <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+          <td mat-cell *matCellDef="let element"> {{element.Cantidad}} </td>
+        </ng-container>
+      
+
+        <ng-container matColumnDef="Marca_Comercial">
+          <th mat-header-cell *matHeaderCellDef> Marca Comercial </th>
+          <td mat-cell *matCellDef="let element"> {{element.Marca_Comercial}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="Prelavado">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Prelavado </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+              <mat-icon (click)="element.status1=!element.status1" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status1 ? 'cancel' : 'check_circle' }}</mat-icon>
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="Completo">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">Completo </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+              <mat-icon  (click)="disabledInput1 = !disabledInput1" (click)="element.status2=!element.status2" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status2 ? 'cancel' : 'check_circle' }}</mat-icon>
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="Funcional">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Funcional </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+                <mat-icon (click)="element.status3=!element.status3" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status3 ? 'cancel' : 'check_circle' }}</mat-icon>
+            </td>
+        </ng-container>
+        
+
+        <ng-container matColumnDef="Cantidad_Recibida">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Cantidad Recibida </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">   
+                <mat-form-field style=" width: 50%">
+                    <input matInput type="number" min="1"  step="1" value="1" [disabled]="!element.status2">
+                  </mat-form-field> 
+            </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="insidencia">
+          <th mat-header-cell *matHeaderCellDef style="text-align: center; width: 75px;">  </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center; width: 75px;">   
+            <mat-icon aria-hidden="false" aria-label="Example home icon"  (click)="emergente1()" fontIcon="warning" class="icono2" *ngIf="element.status1 || element.status2 || element.status3"></mat-icon>
+          </td>
+      </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
+      </table>
+</div><br>
+
+
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+    <h1>Set de Instrumental Quirúrgico</h1>
+</div>
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+        <mat-accordion style="width: 100%;">
+            <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Set 2 Laparotomía
+                </mat-panel-title>
+        
+            </mat-expansion-panel-header>
+            <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="Id">
+                  <th mat-header-cell *matHeaderCellDef> ID </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="Instrumental">
+                  <th mat-header-cell *matHeaderCellDef> Instrumental </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Instrumental}} </td>
+                </ng-container>
+              
+         
+                <ng-container matColumnDef="Cantidad">
+                  <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Cantidad}} </td>
+                </ng-container>
+              
+        
+                <ng-container matColumnDef="Marca_Comercial">
+                  <th mat-header-cell *matHeaderCellDef> Marca Comercial </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Marca_Comercial}} </td>
+                </ng-container>
+        
+                
+                <ng-container matColumnDef="Prelavado">
+                    <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Prelavado </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+                      <mat-icon (click)="element.status4=!element.status4" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status4 ? 'cancel' : 'check_circle' }}</mat-icon>
+                  </td>
+                </ng-container>
+        
+        
+                <ng-container matColumnDef="Completo">
+                    <th mat-header-cell *matHeaderCellDef style="text-align: center;">Completo </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+                      <mat-icon (click)="element.status5=!element.status5" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status5 ? 'cancel' : 'check_circle' }}</mat-icon>
+                  </td>
+                </ng-container>
+        
+        
+                <ng-container matColumnDef="Funcional">
+                    <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Funcional </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+                      <mat-icon (click)="element.status6=!element.status6" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status6 ? 'cancel' : 'check_circle' }}</mat-icon>
+                  </td>
+                </ng-container>
+                
+        
+                <ng-container matColumnDef="Cantidad_Recibida">
+                    <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Cantidad Recibida </th>
+                    <td mat-cell *matCellDef="let element" style="text-align: center;">   
+                      <mat-form-field style=" width: 50%">
+                          <input matInput type="number" min="1"  step="1" value="1" [disabled]="!element.status5">
+                        </mat-form-field> 
+                  </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="insidencia">
+                  <th mat-header-cell *matHeaderCellDef style="text-align: center;">  </th>
+                  <td mat-cell *matCellDef="let element" style="text-align: center; width: 75px;">   
+                    <mat-icon aria-hidden="false" aria-label="Example home icon"  (click)="emergente1()" fontIcon="warning" class="icono2" *ngIf="element.status4 || element.status5 || element.status6"></mat-icon>
+                  </td>
+              </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table>
+            </mat-expansion-panel>
+            
+        </mat-accordion><br>
+</div><br>
+
+    <div style="display: flex; justify-content: right; width: 90%; margin-left: 5%; margin-right: 5%;">
+          <button class="botones" style=" margin-right: 20px;">Cancelar</button>
+          <button class="botones" style=" margin-right: 20px;">Guardar</button>
+        </div>
+
+
+
+        
