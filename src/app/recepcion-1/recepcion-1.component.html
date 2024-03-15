@@ -215,7 +215,7 @@
             <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Cantidad Recibida </th>
             <td mat-cell *matCellDef="let element" style="text-align: center;">   
                 <mat-form-field style=" width: 50%">
-                    <input matInput type="number" min="1"  step="1" value="1" [disabled]="!element.status2">
+                    <input matInput type="number" min="0"  step="1" value="0" [disabled]="!element.status2">
                   </mat-form-field> 
             </td>
         </ng-container>
@@ -301,7 +301,7 @@
                     <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Cantidad Recibida </th>
                     <td mat-cell *matCellDef="let element" style="text-align: center;">   
                       <mat-form-field style=" width: 50%">
-                          <input matInput type="number" min="1"  step="1" value="1" [disabled]="!element.status5">
+                          <input matInput type="number" min="0"  step="1" value="0" [disabled]="!element.status5">
                         </mat-form-field> 
                   </td>
                 </ng-container>
