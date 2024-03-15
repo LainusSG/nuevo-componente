@@ -25,12 +25,16 @@ import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule }   from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { EmergenteComponent } from './Emergente/emergente/emergente.component';
+import { RecepcionOtrasAreasComponent } from './recepcion-otras-areas/recepcion-otras-areas.component';
+import { RecepcionProvedorExternoComponent } from './recepcion-provedor-externo/recepcion-provedor-externo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Recepcion1Component,
-    EmergenteComponent
+    EmergenteComponent,
+    RecepcionOtrasAreasComponent,
+    RecepcionProvedorExternoComponent
   ],
   imports: [
     BrowserModule,

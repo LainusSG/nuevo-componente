@@ -1,0 +1,203 @@
+
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+    <div style="width: 33%; text-align: left;">
+        <h2>Solicitud de esterilización</h2>
+    </div>
+    <div style="width: 33%; text-align: right;">
+        <h2>Turno: {{turno}}</h2>
+    </div>
+    <div style="width: 33%; text-align: right;">
+        <h2>Ticket {{ticket}}</h2>
+    </div>
+</div>
+
+
+
+
+<table class="alinear-input" align="center">
+    <!------------------------------------------------------------              fila 1                                ----------------------------------------------------------------->
+      <tr>
+        <td>
+          <mat-label>Área: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1">
+            <mat-select [(ngModel)]="selectedValue" name="food">
+              @for (food of foods; track food) {
+                <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+              }
+            </mat-select>
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>Fecha de Ingreso: &nbsp;&nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input matInput type="text" placeholder="22 de septiembre 2023" >
+          </mat-form-field>
+        </td>
+      </tr>
+    
+    <!------------------------------------------------------------              fila 2                                ----------------------------------------------------------------->
+    
+      <tr>
+        <td>
+          <mat-label>Recepción: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input1">
+            <input matInput type="text" placeholder="José Lino" >
+            </mat-form-field>
+        </td>
+    
+        <td>
+          <mat-label>Entrega: &nbsp;</mat-label>
+        </td>
+    
+        <td>
+          <mat-form-field class="input2">
+            <input matInput type="text" placeholder="Casimiro Gomez" >
+          </mat-form-field>
+        </td>
+      </tr>
+  </table><br>
+
+  <table class="alinear-input" align="center"> 
+
+    <tr style="width: 100%;">
+      <td style="width: 14%;">
+        <mat-label>Notas Adicionales:</mat-label>
+      </td>
+      <td style="width: 86%;">
+        <mat-form-field class="textarea">
+          <textarea matInput placeholder="3 Pinzas H. extras para la cirugía "></textarea>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+<!------------------------------------------------------- TARJETA DE INDENTIFICACION ------------------------------------->
+    <div style="text-align: center;">
+         <h1>Instrumental</h1>
+    </div><br>
+
+
+
+
+
+
+    <div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+        <h2>Proceso de Recepción, Clasificación y Lavado de Dispositivos e Instrumental.</h2>
+    </div><br><br>
+
+
+
+    <table class="alinear-input" align="center">
+
+        <tr>
+            <td>
+                <div><mat-label>Instrumental</mat-label></div>
+                <mat-form-field class="example-form-field">
+                    <input matInput type="text">
+                  </mat-form-field>    
+            </td>
+
+            <td>
+                <div><mat-label>  Marca Comercial</mat-label></div>
+                <mat-form-field class="example-form-field">
+                    <input matInput type="text">
+                  </mat-form-field>    
+            </td>
+
+
+            <td>
+                <div><mat-label>Cantidad</mat-label></div>
+                <mat-form-field class="example-form-field">
+                    <input matInput type="number" min="0"  step="1" value="0">
+                  </mat-form-field>    
+            </td>
+
+
+            <td>
+                <button class="botones" style=" margin-right: 20px;">Agregar</button>
+            </td>
+        </tr>
+
+    </table><br><br>
+
+
+
+<div style="display: flex; width: 90%; margin-left: 5%; margin-right: 5%;">
+
+    <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element; let i = dataSource1"> {{element.Id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="Instrumental">
+          <th mat-header-cell *matHeaderCellDef> Instrumental </th>
+          <td mat-cell *matCellDef="let element"> {{element.Instrumental}} </td>
+        </ng-container>
+      
+ 
+        <ng-container matColumnDef="Cantidad">
+          <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+          <td mat-cell *matCellDef="let element"> {{element.Cantidad}} </td>
+        </ng-container>
+      
+
+        <ng-container matColumnDef="Marca_Comercial">
+          <th mat-header-cell *matHeaderCellDef> Marca Comercial </th>
+          <td mat-cell *matCellDef="let element"> {{element.Marca_Comercial}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="Prelavado">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Prelavado </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+              <mat-icon (click)="element.status1=!element.status1" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status1 ? 'cancel' : 'check_circle' }}</mat-icon>
+          </td>
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="Funcional">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Funcional </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;"> 
+                <mat-icon (click)="element.status3=!element.status3" #first ion-button color="accent" (click)="btnActivate(first)" class="icono" >{{element.status3 ? 'cancel' : 'check_circle' }}</mat-icon>
+            </td>
+        </ng-container>
+        
+
+
+
+        <ng-container matColumnDef="insidencia">
+          <th mat-header-cell *matHeaderCellDef style="text-align: left; width: 10%;"> </th>
+          <td mat-cell *matCellDef="let element" style="text-align: left;">   
+            <mat-icon aria-hidden="false" aria-label="Example home icon"  (click)="emergente1()" fontIcon="warning" class="icono2" *ngIf="element.status1 || element.status2 || element.status3"></mat-icon>
+          </td>
+      </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
+      </table>
+</div><br>
+
+
+
+    <div style="display: flex; justify-content: right; width: 90%; margin-left: 5%; margin-right: 5%;">
+          <button class="botones" style=" margin-right: 20px;">Cancelar</button>
+          <button class="botones" style=" margin-right: 20px;">Guardar</button>
+        </div>
+
+
+
+        
